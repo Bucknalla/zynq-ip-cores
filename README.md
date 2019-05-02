@@ -1,4 +1,4 @@
-### Xilinx Zynq IP Cores
+# Xilinx Zynq IP Cores
 
 #### TOC
 
