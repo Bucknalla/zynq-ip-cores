@@ -74,8 +74,8 @@
 	);
 	
 	wire [C_M00_AXIS_TDATA_WIDTH-1:0] reg0;
-    wire axi_mode;
-    assign axi_mode = reg0 [0:0];
+    wire [1:0] axi_mode;
+    assign axi_mode = reg0 [1:0];
     wire [C_M00_AXIS_TDATA_WIDTH-1:0] reg1;
     wire axi_start;
     assign axi_start = reg1 [0:0];
@@ -204,7 +204,7 @@
         );
     
     
-    	aes_module aes (
+    	aes_wrapper aes (
            .clk(s00_axis_aclk),
            .reset(s00_axis_aresetn),
            .mode(axi_mode),
@@ -217,7 +217,7 @@
         assign status_0 = aes_done;
         always @ (posedge m00_axis_aclk) begin
         
-            if(axi_mode) begin
+            if(axi_mode == 0'b00) begin
                 status_1 <= 1;
             end
             else begin

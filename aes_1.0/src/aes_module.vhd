@@ -63,7 +63,7 @@ begin
 			elsif rising_edge(clk) then
 				if result_valid = '1' then
 					dout_in <= aes_result;
-				end if;	
+				end if;
 			end if;
 	end process dout_reg;
 	
