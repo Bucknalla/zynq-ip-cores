@@ -44,6 +44,7 @@
 		input wire  s00_axi_rready
 	);
 // Instantiation of Axi Bus Interface S00_AXI
+/*
 	partial_led_test_v1_0_S00_AXI partial_led_test_v1_0_S00_AXI_inst (
 	    .leds(leds),
 		.S_AXI_ACLK(s00_axi_aclk),
@@ -68,6 +69,7 @@
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready)
 	);
+*/
 
 	// Add user logic here
  
