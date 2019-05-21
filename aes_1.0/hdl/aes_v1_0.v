@@ -110,33 +110,6 @@
 		.S_AXI_RREADY(s00_axi_rready)
 	);
 
-// Instantiation of Axi Bus Interface S00_AXIS
-//	aes_v1_0_S00_AXIS # ( 
-//		.C_S_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH)
-//	) aes_v1_0_S00_AXIS_inst (
-//		.S_AXIS_ACLK(s00_axis_aclk),
-//		.S_AXIS_ARESETN(s00_axis_aresetn),
-//		.S_AXIS_TREADY(s00_axis_tready),
-//		.S_AXIS_TDATA(s00_axis_tdata),
-//		.S_AXIS_TSTRB(s00_axis_tstrb),
-//		.S_AXIS_TLAST(s00_axis_tlast),
-//		.S_AXIS_TVALID(s00_axis_tvalid)
-//	);
-
-// Instantiation of Axi Bus Interface M00_AXIS
-//	aes_v1_0_M00_AXIS # ( 
-//		.C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH),
-//		.C_M_START_COUNT(C_M00_AXIS_START_COUNT)
-//	) aes_v1_0_M00_AXIS_inst (
-//		.M_AXIS_ACLK(m00_axis_aclk),
-//		.M_AXIS_ARESETN(m00_axis_aresetn),
-//		.M_AXIS_TVALID(m00_axis_tvalid),
-//		.M_AXIS_TDATA(m00_axis_tdata),
-//		.M_AXIS_TSTRB(m00_axis_tstrb),
-//		.M_AXIS_TLAST(m00_axis_tlast),
-//		.M_AXIS_TREADY(m00_axis_tready)
-//	);
-
 	// Add user logic here	
 
     // Data In
@@ -145,9 +118,9 @@
     wire m_crypto_axis_tready;
     wire [C_CRYPTO_AXIS_TDATA_WIDTH-1:0] m_crypto_axis_tdata;
     
-    axis_dwidth_converter_0 #(
+    axis_dwidth_converter_1 #(
 //        .C_S_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH),
-//        .C_M_AXIS_TDATA_WIDTH(C_CRYPTO_AXIS_TDATA_WIDTH),
+//        .C_M_AXIS_TDATA_WIDTH(C_CRYPTO_AXIS_TDATA_WIDTH)
 //        .C_AXIS_TID_WIDTH(1),
 //        .C_AXIS_TDEST_WIDTH(1),
 //        .C_S_AXIS_TUSER_WIDTH(1),
@@ -179,7 +152,7 @@
 
           axis_dwidth_converter_0 #(
 //          .C_S_AXIS_TDATA_WIDTH(C_CRYPTO_AXIS_TDATA_WIDTH),
-//          .C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH),
+//          .C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH)
 //          .C_AXIS_TID_WIDTH(1),
 //          .C_AXIS_TDEST_WIDTH(1),
 //          .C_S_AXIS_TUSER_WIDTH(1),
@@ -215,6 +188,8 @@
         );
         
         assign status_0 = aes_done;
+        assign s00_axis_tready = aes_done;
+
         always @ (posedge m00_axis_aclk) begin
         
             if(axi_mode == 0'b00) begin

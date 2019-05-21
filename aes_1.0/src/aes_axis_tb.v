@@ -28,32 +28,33 @@ reg CLK;
 reg RESET;
 
 ///////////////////////////  AXI_LITE (MASTER)  //////////////////////////////////
-reg M_AW_VALID;
-reg [31:0] M_AW_ADDR;
+reg M_AW_VALID = 0;
+reg [3:0] M_AW_ADDR = 0;
 wire M_AW_READY;
 
-reg M_W_VALID;
-reg M_W_READY;
-reg [31:0] M_W_DATA;
+reg M_W_VALID = 0;
+wire M_W_READY;
+reg [31:0] M_W_DATA = 0;
 
-reg [31:0] M_AR_ADDR;
-reg M_AR_VALID;
+reg [3:0] M_AR_ADDR = 0;
+reg M_AR_VALID = 0;
 wire M_AR_READY;
 
-reg M_B_READY;
+reg M_B_READY = 0;
+wire M_B_VALID = 0;
 wire M_B_RESP; // Write information (not required)
 
 ///////////////////////////  AXI_STREAM (MASTER)  ////////////////////////////////
 
-reg M_AXIS_VALID;
+reg M_AXIS_VALID = 0;
 wire M_AXIS_READY;
-reg [31:0] M_AXIS_DATA;
+reg [31:0] M_AXIS_DATA = 0;
 
 ///////////////////////////  AXI_STREAM (SLAVE)  ////////////////////////////////
 
-reg S_AXIS_VALID;
+wire S_AXIS_VALID;
 wire S_AXIS_READY;
-reg [31:0] S_AXIS_DATA;
+wire [31:0] S_AXIS_DATA;
 
 ///////////////////////////////  AES_STATUS  ////////////////////////////////////
 
@@ -80,7 +81,7 @@ aes_v1_0 DUT (
     .s00_axi_wvalid(M_W_VALID),
     .s00_axi_wready(M_W_READY),
 //    .s00_axi_bresp(),
-//    .s00_axi_bvalid(),
+    .s00_axi_bvalid(),
 //    .s00_axi_bready(),
     .s00_axi_araddr(M_AR_ADDR),
 //    .s00_axi_arprot(),
@@ -111,25 +112,42 @@ aes_v1_0 DUT (
     .m00_axis_tready(S_AXIS_READY)
 );
 
-initial begin
-
-
-end
-
-task do_write;
-    input [7:0] i_addr, i_data; 
+task axi_write;
+    input [3:0] i_add;
+    input [31:0] i_data; 
     begin
       // demonstrates driving external Global Reg
       M_AW_VALID    = 1'b1;
-      M_AW_ADDR     = 0'd32;
+      M_AW_ADDR     = i_add;
       M_W_VALID    = 1'b1;
-      M_AW_ADDR     = 0'd32;
+      M_W_DATA = i_data;
 
       #10;
     end
  endtask
+ 
+task axis_write;
+     input [31:0] i_data; 
+     begin
+       // demonstrates driving external Global Reg
+       M_AXIS_VALID = 1'b1;
+       if(M_AXIS_READY) begin
+          M_AXIS_DATA = i_data;
+       end 
+       #10;
+     end
+  endtask
 
 always #10 CLK = ~CLK;
+
+
+initial begin
+    CLK = 0;
+    RESET = 0;
+    #100 RESET = 1;
+    #50 axi_write(32,200);
+    #1000 $finish;
+end
 
 
 

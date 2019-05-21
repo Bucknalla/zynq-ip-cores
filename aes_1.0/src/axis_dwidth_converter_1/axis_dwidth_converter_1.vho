@@ -52,16 +52,16 @@
 -- The following code must appear in the VHDL architecture header.
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
-COMPONENT axis_dwidth_converter_0
+COMPONENT axis_dwidth_converter_1
   PORT (
     aclk : IN STD_LOGIC;
     aresetn : IN STD_LOGIC;
     s_axis_tvalid : IN STD_LOGIC;
     s_axis_tready : OUT STD_LOGIC;
-    s_axis_tdata : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
+    s_axis_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_tvalid : OUT STD_LOGIC;
     m_axis_tready : IN STD_LOGIC;
-    m_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    m_axis_tdata : OUT STD_LOGIC_VECTOR(127 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -70,7 +70,7 @@ END COMPONENT;
 -- body. Substitute your own instance name and net names.
 
 ------------- Begin Cut here for INSTANTIATION Template ----- INST_TAG
-your_instance_name : axis_dwidth_converter_0
+your_instance_name : axis_dwidth_converter_1
   PORT MAP (
     aclk => aclk,
     aresetn => aresetn,
@@ -83,7 +83,7 @@ your_instance_name : axis_dwidth_converter_0
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 
--- You must compile the wrapper file axis_dwidth_converter_0.vhd when simulating
--- the core, axis_dwidth_converter_0. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file axis_dwidth_converter_1.vhd when simulating
+-- the core, axis_dwidth_converter_1. When compiling the wrapper file, be sure to
 -- reference the VHDL simulation library.
 

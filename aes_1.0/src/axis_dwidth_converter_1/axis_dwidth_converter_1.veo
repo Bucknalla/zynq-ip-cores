@@ -54,19 +54,19 @@
 // (in parentheses) to your own signal names.
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-axis_dwidth_converter_0 your_instance_name (
+axis_dwidth_converter_1 your_instance_name (
   .aclk(aclk),                    // input wire aclk
   .aresetn(aresetn),              // input wire aresetn
   .s_axis_tvalid(s_axis_tvalid),  // input wire s_axis_tvalid
   .s_axis_tready(s_axis_tready),  // output wire s_axis_tready
-  .s_axis_tdata(s_axis_tdata),    // input wire [127 : 0] s_axis_tdata
+  .s_axis_tdata(s_axis_tdata),    // input wire [31 : 0] s_axis_tdata
   .m_axis_tvalid(m_axis_tvalid),  // output wire m_axis_tvalid
   .m_axis_tready(m_axis_tready),  // input wire m_axis_tready
-  .m_axis_tdata(m_axis_tdata)    // output wire [31 : 0] m_axis_tdata
+  .m_axis_tdata(m_axis_tdata)    // output wire [127 : 0] m_axis_tdata
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
-// You must compile the wrapper file axis_dwidth_converter_0.v when simulating
-// the core, axis_dwidth_converter_0. When compiling the wrapper file, be sure to
+// You must compile the wrapper file axis_dwidth_converter_1.v when simulating
+// the core, axis_dwidth_converter_1. When compiling the wrapper file, be sure to
 // reference the Verilog simulation library.
 
