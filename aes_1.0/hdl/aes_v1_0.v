@@ -115,7 +115,7 @@
     // Data In
     
     wire m_crypto_axis_tvalid;
-    wire m_crypto_axis_tready;
+    reg m_crypto_axis_tready = 1;
     wire [C_CRYPTO_AXIS_TDATA_WIDTH-1:0] m_crypto_axis_tdata;
     
     axis_dwidth_converter_1 #(
@@ -188,7 +188,7 @@
         );
         
         assign status_0 = aes_done;
-        assign s00_axis_tready = aes_done;
+//        assign s00_axis_tready = aes_done;
 
         always @ (posedge m00_axis_aclk) begin
         
