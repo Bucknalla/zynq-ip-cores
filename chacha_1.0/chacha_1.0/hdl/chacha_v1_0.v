@@ -1,7 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module present_v1_0 #
+	module chacha_v1_0 #
 	(
 		// Users to add parameters here
 
@@ -13,12 +13,12 @@
 		parameter integer C_S00_AXI_DATA_WIDTH	= 32,
 		parameter integer C_S00_AXI_ADDR_WIDTH	= 4,
 
-		// Parameters of Axi Slave Bus Interface S00_AXIS
-		parameter integer C_S00_AXIS_TDATA_WIDTH	= 32,
-
 		// Parameters of Axi Master Bus Interface M00_AXIS
 		parameter integer C_M00_AXIS_TDATA_WIDTH	= 32,
-		parameter integer C_M00_AXIS_START_COUNT	= 32
+		parameter integer C_M00_AXIS_START_COUNT	= 32,
+
+		// Parameters of Axi Slave Bus Interface S00_AXIS
+		parameter integer C_S00_AXIS_TDATA_WIDTH	= 32
 	)
 	(
 		// Users to add ports here
@@ -50,15 +50,6 @@
 		output wire  s00_axi_rvalid,
 		input wire  s00_axi_rready,
 
-		// Ports of Axi Slave Bus Interface S00_AXIS
-		input wire  s00_axis_aclk,
-		input wire  s00_axis_aresetn,
-		output wire  s00_axis_tready,
-		input wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
-		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
-		input wire  s00_axis_tlast,
-		input wire  s00_axis_tvalid,
-
 		// Ports of Axi Master Bus Interface M00_AXIS
 		input wire  m00_axis_aclk,
 		input wire  m00_axis_aresetn,
@@ -66,13 +57,22 @@
 		output wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
 		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
 		output wire  m00_axis_tlast,
-		input wire  m00_axis_tready
+		input wire  m00_axis_tready,
+
+		// Ports of Axi Slave Bus Interface S00_AXIS
+		input wire  s00_axis_aclk,
+		input wire  s00_axis_aresetn,
+		output wire  s00_axis_tready,
+		input wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
+		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
+		input wire  s00_axis_tlast,
+		input wire  s00_axis_tvalid
 	);
 // Instantiation of Axi Bus Interface S00_AXI
-	present_v1_0_S00_AXI # ( 
+	chacha_v1_0_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
-	) present_v1_0_S00_AXI_inst (
+	) chacha_v1_0_S00_AXI_inst (
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -96,36 +96,32 @@
 		.S_AXI_RREADY(s00_axi_rready)
 	);
 
-    PRESENT present (
-            //encoder path
-        .enc_plaintext(),
-        .enc_ciphertext(),
-        .enc_start(), 
-        .enc_ready(),
-        .enc_hdr_start(),
-        .enc_hdr_done(),
-    //    encoder_ready,
-        
-        //decoder path
-        .dec_ciphertext(),
-        .dec_plaintext(),
-        .dec_start(),
-        .dec_ready(),
-        .dec_hdr_start(),
-        .dec_hdr_done(),
-        
-        // Key
-        .key(),
-        .generate_key(), // generate subkeys
-        // Clk,Rst
-        .clk_in(), 
-        .rst_in()
-    
-    
-    
-    
-    );
+// Instantiation of Axi Bus Interface M00_AXIS
+	chacha_v1_0_M00_AXIS # ( 
+		.C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH),
+		.C_M_START_COUNT(C_M00_AXIS_START_COUNT)
+	) chacha_v1_0_M00_AXIS_inst (
+		.M_AXIS_ACLK(m00_axis_aclk),
+		.M_AXIS_ARESETN(m00_axis_aresetn),
+		.M_AXIS_TVALID(m00_axis_tvalid),
+		.M_AXIS_TDATA(m00_axis_tdata),
+		.M_AXIS_TSTRB(m00_axis_tstrb),
+		.M_AXIS_TLAST(m00_axis_tlast),
+		.M_AXIS_TREADY(m00_axis_tready)
+	);
 
+// Instantiation of Axi Bus Interface S00_AXIS
+	chacha_v1_0_S00_AXIS # ( 
+		.C_S_AXIS_TDATA_WIDTH(C_S00_AXIS_TDATA_WIDTH)
+	) chacha_v1_0_S00_AXIS_inst (
+		.S_AXIS_ACLK(s00_axis_aclk),
+		.S_AXIS_ARESETN(s00_axis_aresetn),
+		.S_AXIS_TREADY(s00_axis_tready),
+		.S_AXIS_TDATA(s00_axis_tdata),
+		.S_AXIS_TSTRB(s00_axis_tstrb),
+		.S_AXIS_TLAST(s00_axis_tlast),
+		.S_AXIS_TVALID(s00_axis_tvalid)
+	);
 
 	// Add user logic here
 
