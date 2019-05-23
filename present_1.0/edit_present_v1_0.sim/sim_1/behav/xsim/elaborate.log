@@ -1,0 +1,23 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 46c10476a7fc453d95e64cb18ca58c01 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot present128_axis_tb_behav xil_defaultlib.present128_axis_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_textio
+Compiling package xil_defaultlib.util
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.sbox [sbox_default]
+Compiling architecture structural of entity xil_defaultlib.sub_layer [sub_layer_default]
+Compiling architecture structural of entity xil_defaultlib.perm_layer [perm_layer_default]
+Compiling architecture structural of entity xil_defaultlib.key_schedule [\key_schedule(k=k_128)\]
+Compiling architecture behavioral of entity xil_defaultlib.present_top [\present_top(k=k_128)\]
+Compiling architecture behavioral of entity xil_defaultlib.axi_stream_wrapper [\axi_stream_wrapper(k=k_128)\]
+Compiling architecture behavior of entity xil_defaultlib.present128_axis_tb
+Built simulation snapshot present128_axis_tb_behav

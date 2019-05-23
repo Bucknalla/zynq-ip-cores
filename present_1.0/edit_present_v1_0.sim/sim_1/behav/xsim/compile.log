@@ -1,0 +1,15 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/util.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/axi_stream_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity axi_stream_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/key_schedule.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity key_schedule
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/perm_layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity perm_layer
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/present_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity present_top
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/sbox.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sbox
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/sub_layer.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity sub_layer
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0/hdl/sim/present128_axis_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity present128_axis_tb

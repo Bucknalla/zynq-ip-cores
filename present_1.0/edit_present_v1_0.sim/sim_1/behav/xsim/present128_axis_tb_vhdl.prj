@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../present_1.0/hdl/util.vhd" \
+"../../../../present_1.0/hdl/axi_stream_wrapper.vhd" \
+"../../../../present_1.0/hdl/key_schedule.vhd" \
+"../../../../present_1.0/hdl/perm_layer.vhd" \
+"../../../../present_1.0/hdl/present_top.vhd" \
+"../../../../present_1.0/hdl/sbox.vhd" \
+"../../../../present_1.0/hdl/sub_layer.vhd" \
+"../../../../present_1.0/hdl/sim/present128_axis_tb.vhd" \
+
+# Do not sort compile order
+nosort
