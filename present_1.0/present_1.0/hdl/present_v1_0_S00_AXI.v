@@ -15,7 +15,10 @@
 	)
 	(
 		// Users to add ports here
-
+        output wire mode,
+        output wire [C_S_AXI_DATA_WIDTH-1:0] key_0,
+        output wire [C_S_AXI_DATA_WIDTH-1:0] key_1,
+        output wire [C_S_AXI_DATA_WIDTH-1:0] key_2,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -398,7 +401,10 @@
 	end    
 
 	// Add user logic here
-
+    assign mode = slv_reg0 [0:0];
+    assign key_0 = slv_reg1[C_S_AXI_DATA_WIDTH-1:0];
+    assign key_1 = slv_reg2[C_S_AXI_DATA_WIDTH-1:0];
+    assign key_2 = slv_reg3[15:0];
 	// User logic ends
 
 	endmodule

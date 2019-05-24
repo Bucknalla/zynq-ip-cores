@@ -68,11 +68,29 @@
 		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready
 	);
+	
+    wire sel;
+    reg enc_start, dec_start;
+    wire [63:0] enc_in;
+    wire [63:0] enc_out;
+    wire [63:0] dec_in;
+    wire [63:0] dec_out;
+    reg [63:0] out;
+    reg [63:0] in;
+    wire [31:0] key_0, key_1, key_2;
+    wire [79:0] key;
+    
+    assign key = {key_0, key_1, key_2};
+    
+    
 // Instantiation of Axi Bus Interface S00_AXI
 	present_v1_0_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) present_v1_0_S00_AXI_inst (
+	    .mode(sel),
+	    .key_0(),
+	    .key_1(),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -95,12 +113,12 @@
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready)
 	);
-
+	
     PRESENT present (
             //encoder path
-        .enc_plaintext(),
-        .enc_ciphertext(),
-        .enc_start(), 
+        .enc_plaintext(enc_in),
+        .enc_ciphertext(enc_out),
+        .enc_start(enc_start), 
         .enc_ready(),
         .enc_hdr_start(),
         .enc_hdr_done(),
@@ -109,22 +127,57 @@
         //decoder path
         .dec_ciphertext(),
         .dec_plaintext(),
-        .dec_start(),
+        .dec_start(dec_start),
         .dec_ready(),
         .dec_hdr_start(),
         .dec_hdr_done(),
         
         // Key
-        .key(),
+        .key(key),
         .generate_key(), // generate subkeys
         // Clk,Rst
-        .clk_in(), 
-        .rst_in()
-    
-    
-    
-    
+        .clk_in(s00_axis_aclk), 
+        .rst_in(s00_axis_aresetn)
     );
+    
+    wire in_aclk, in_aresetn;
+    wire in_s_axis_tvalid;
+    assign in_s_axis_tvalid = s00_axis_tvalid;
+    wire in_s_axis_tready;
+    wire [31:0] in_s_axis_tdata;
+    wire in_m_axis_tvalid;
+    wire in_m_axis_tready;
+    wire [63:0] in_m_axis_tdata;
+    
+    axis_dwidth_converter_0 input_axis (
+      .aclk(in_aclk),                    // input wire aclk
+      .aresetn(in_aresetn),              // input wire aresetn
+      .s_axis_tvalid(in_s_axis_tvalid),  // input wire s_axis_tvalid
+      .s_axis_tready(in_s_axis_tready),  // output wire s_axis_tready
+      .s_axis_tdata(in_s_axis_tdata),    // input wire [31 : 0] s_axis_tdata
+      .m_axis_tvalid(in_m_axis_tvalid),  // output wire m_axis_tvalid
+      .m_axis_tready(in_m_axis_tready),  // input wire m_axis_tready
+      .m_axis_tdata(in_m_axis_tdata)    // output wire [63 : 0] m_axis_tdata
+    );
+    
+    
+    // Mode Select
+    
+    
+    always @ (posedge s00_axis_aclk) begin
+      case (sel)
+        1'b0 : begin
+                enc_start <= 1;
+                dec_start <= 0;
+                out <= enc_out;
+               end
+        1'b1 : begin
+                enc_start <= 0;
+                dec_start <= 1;
+                out <= dec_out;
+               end
+      endcase
+    end
 
 
 	// Add user logic here
