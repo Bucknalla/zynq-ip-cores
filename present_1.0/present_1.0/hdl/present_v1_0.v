@@ -71,12 +71,16 @@
 	
     wire sel;
     reg enc_start, dec_start;
-    wire [63:0] enc_in;
+    reg [63:0] enc_in;
     wire [63:0] enc_out;
-    wire [63:0] dec_in;
+    wire enc_ready;
+    reg [63:0] dec_in;
     wire [63:0] dec_out;
+    wire dec_ready;
+    wire enc_hdr_start;
+    wire dec_hdr_start; 
     reg [63:0] out;
-    reg [63:0] in;
+    wire [63:0] in;
     wire [31:0] key_0, key_1, key_2;
     wire [79:0] key;
     
@@ -89,8 +93,9 @@
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) present_v1_0_S00_AXI_inst (
 	    .mode(sel),
-	    .key_0(),
-	    .key_1(),
+	    .key_0(key_0),
+	    .key_1(key_1),
+	    .key_2(key_2),
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -114,40 +119,60 @@
 		.S_AXI_RREADY(s00_axi_rready)
 	);
 	
+	wire in_aclk, in_aresetn;
+    wire in_s_axis_tvalid;
+    assign in_s_axis_tvalid = s00_axis_tvalid;
+    wire in_s_axis_tready;
+    assign s00_axis_tready = in_s_axis_tready;
+    wire [31:0] in_s_axis_tdata;
+    wire in_m_axis_tvalid;
+    wire in_m_axis_tready;
+    wire [63:0] in_m_axis_tdata;
+    assign in = in_m_axis_tdata;
+    
+    wire out_aclk, out_aresetn;
+    wire out_s_axis_tvalid;
+    wire out_s_axis_tready;
+    wire [63:0] out_s_axis_tdata;
+    wire out_m_axis_tvalid;
+    assign out_m_axis_tvalid = m00_axis_tvalid;
+    wire out_m_axis_tready;
+    wire [31:0] out_m_axis_tdata;
+    
+    reg gen_key = 1;
+	
     PRESENT present (
             //encoder path
         .enc_plaintext(enc_in),
         .enc_ciphertext(enc_out),
         .enc_start(enc_start), 
-        .enc_ready(),
-        .enc_hdr_start(),
+        .enc_ready(enc_ready),
+        .enc_hdr_start(1),
         .enc_hdr_done(),
     //    encoder_ready,
         
         //decoder path
-        .dec_ciphertext(),
-        .dec_plaintext(),
+        .dec_ciphertext(dec_in),
+        .dec_plaintext(dec_out),
         .dec_start(dec_start),
-        .dec_ready(),
-        .dec_hdr_start(),
+        .dec_ready(dec_ready),
+        .dec_hdr_start(1),
         .dec_hdr_done(),
         
         // Key
         .key(key),
-        .generate_key(), // generate subkeys
+        .generate_key(gen_key), // generate subkeys
         // Clk,Rst
         .clk_in(s00_axis_aclk), 
         .rst_in(s00_axis_aresetn)
     );
     
-    wire in_aclk, in_aresetn;
-    wire in_s_axis_tvalid;
-    assign in_s_axis_tvalid = s00_axis_tvalid;
-    wire in_s_axis_tready;
-    wire [31:0] in_s_axis_tdata;
-    wire in_m_axis_tvalid;
-    wire in_m_axis_tready;
-    wire [63:0] in_m_axis_tdata;
+    // AXIS IN
+    
+    assign in_s_axis_tdata = s00_axis_tdata;
+    assign in_aclk = s00_axis_aclk;
+    assign in_aresetn = s00_axis_aresetn;
+    assign s00_axis_tready = in_s_axis_tready;
     
     axis_dwidth_converter_0 input_axis (
       .aclk(in_aclk),                    // input wire aclk
@@ -156,26 +181,56 @@
       .s_axis_tready(in_s_axis_tready),  // output wire s_axis_tready
       .s_axis_tdata(in_s_axis_tdata),    // input wire [31 : 0] s_axis_tdata
       .m_axis_tvalid(in_m_axis_tvalid),  // output wire m_axis_tvalid
-      .m_axis_tready(in_m_axis_tready),  // input wire m_axis_tready
+      .m_axis_tready(1),  // input wire m_axis_tready
       .m_axis_tdata(in_m_axis_tdata)    // output wire [63 : 0] m_axis_tdata
+    );
+    
+    // AXIS OUT
+    
+    assign out_m_axis_tdata = m00_axis_tdata;
+    assign out_aclk = m00_axis_aclk;
+    assign out_aresetn = m00_axis_aresetn;
+    assign m00_axis_tvalid = out_m_axis_tvalid;
+    
+    axis_dwidth_converter_1 output_axis (
+      .aclk(out_aclk),                    // input wire aclk
+      .aresetn(out_aresetn),              // input wire aresetn
+      .s_axis_tvalid(out_s_axis_tvalid),  // input wire s_axis_tvalid
+      .s_axis_tready(out_s_axis_tready),  // output wire s_axis_tready
+      .s_axis_tdata(out),    // input wire [31 : 0] s_axis_tdata
+      .m_axis_tvalid(out_m_axis_tvalid),  // output wire m_axis_tvalid
+      .m_axis_tready(out_m_axis_tready),  // input wire m_axis_tready
+      .m_axis_tdata(out_m_axis_tdata)    // output wire [63 : 0] m_axis_tdata
     );
     
     
     // Mode Select
+    assign in_m_axis_tready = sel ? dec_ready : enc_ready;
     
     
     always @ (posedge s00_axis_aclk) begin
       case (sel)
-        1'b0 : begin
+        0 : begin
                 enc_start <= 1;
                 dec_start <= 0;
                 out <= enc_out;
+                enc_in <= in;
+                dec_in <= 0;
                end
-        1'b1 : begin
+        1 : begin
                 enc_start <= 0;
                 dec_start <= 1;
                 out <= dec_out;
+                dec_in <= in;
+                enc_in <= 0;
                end
+        2 : begin
+               enc_start <= 0;
+               dec_start <= 0;
+               out <= 0;
+               dec_in <= in;
+               enc_in <= 0;
+              end
       endcase
     end
 
