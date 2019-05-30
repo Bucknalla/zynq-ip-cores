@@ -69,7 +69,7 @@
 		input wire  m00_axis_tready
 	);
 	
-    wire sel;
+    wire [1:0] sel;
     reg enc_start, dec_start;
     reg [63:0] enc_in;
     wire [63:0] enc_out;
@@ -139,7 +139,8 @@
     wire out_m_axis_tready;
     wire [31:0] out_m_axis_tdata;
     
-    reg gen_key = 1;
+    reg generate_key = 0;
+    wire gen_key;
 	
     PRESENT present (
             //encoder path
@@ -147,7 +148,7 @@
         .enc_ciphertext(enc_out),
         .enc_start(enc_start), 
         .enc_ready(enc_ready),
-        .enc_hdr_start(1),
+        .enc_hdr_start(enc_start),
         .enc_hdr_done(),
     //    encoder_ready,
         
@@ -156,12 +157,13 @@
         .dec_plaintext(dec_out),
         .dec_start(dec_start),
         .dec_ready(dec_ready),
-        .dec_hdr_start(1),
+        .dec_hdr_start(dec_start),
         .dec_hdr_done(),
         
         // Key
         .key(key),
-        .generate_key(gen_key), // generate subkeys
+        .generate_key(generate_key), // generate subkeys
+        .gen_key(),
         // Clk,Rst
         .clk_in(s00_axis_aclk), 
         .rst_in(s00_axis_aresetn)
@@ -181,7 +183,7 @@
       .s_axis_tready(in_s_axis_tready),  // output wire s_axis_tready
       .s_axis_tdata(in_s_axis_tdata),    // input wire [31 : 0] s_axis_tdata
       .m_axis_tvalid(in_m_axis_tvalid),  // output wire m_axis_tvalid
-      .m_axis_tready(1),  // input wire m_axis_tready
+      .m_axis_tready(in_m_axis_tready),  // input wire m_axis_tready
       .m_axis_tdata(in_m_axis_tdata)    // output wire [63 : 0] m_axis_tdata
     );
     
@@ -205,31 +207,51 @@
     
     
     // Mode Select
-    assign in_m_axis_tready = sel ? dec_ready : enc_ready;
+//    assign in_m_axis_tready = sel ? dec_ready : enc_ready;
+    
+    reg [2:0] key_cnt = 0;
     
     
     always @ (posedge s00_axis_aclk) begin
       case (sel)
+      
         0 : begin
+                enc_start <= 0;
+                dec_start <= 0;
+                out <= 0;
+                enc_in <= 0;
+                dec_in <= 0;
+                key_cnt <= 0;
+            end
+        1 : begin
                 enc_start <= 1;
                 dec_start <= 0;
                 out <= enc_out;
                 enc_in <= in;
                 dec_in <= 0;
+                key_cnt <= 0;
                end
-        1 : begin
+        2 : begin
                 enc_start <= 0;
                 dec_start <= 1;
                 out <= dec_out;
                 dec_in <= in;
                 enc_in <= 0;
+                key_cnt <= 0;
                end
-        2 : begin
+        3 : begin
                enc_start <= 0;
                dec_start <= 0;
                out <= 0;
-               dec_in <= in;
+               dec_in <= 0;
                enc_in <= 0;
+               generate_key <= 1;
+               if(key_cnt == 2) begin
+                  generate_key <= 0;
+               end
+               else begin
+                  key_cnt <= key_cnt + 1;
+               end
               end
       endcase
     end

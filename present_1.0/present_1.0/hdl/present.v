@@ -34,6 +34,7 @@ module PRESENT
     // Key
     key,
     generate_key, // generate subkeys
+    gen_key,
     // Clk,Rst
     clk_in, 
     rst_in
@@ -56,6 +57,7 @@ input             generate_key;
 input             clk_in,rst_in;
 input             enc_hdr_start,dec_hdr_start;
 output            enc_hdr_done,dec_hdr_done;
+output            gen_key;
 // output            encoder_ready;
 
 reg    [b_64-1:0]  key_mem [b_32-1:0];
