@@ -1,1 +1,0 @@
--wto "46c10476a7fc453d95e64cb18ca58c01" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "present128_axis_tb_behav" "xil_defaultlib.present128_axis_tb" -log "elaborate.log" 
