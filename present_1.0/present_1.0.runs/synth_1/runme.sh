@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/alex/GitHub/ZyEthCAP/nicap_extend/nicap_test.tmp/present_v1_0_project/present_v1_0_project.runs/synth_1'
+HD_PWD='/home/alex/GitHub/zynq-ip-cores/present_1.0/present_1.0.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log present_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source present_v1_0.tcl
+EAStep vivado -log pres_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pres_top.tcl

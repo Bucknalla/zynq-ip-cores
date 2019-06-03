@@ -1,0 +1,521 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:54:30 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 15041
+License: Customer
+
+Current time: 	Mon Jun 03 15:50:02 BST 2019
+Time zone: 	Greenwich Mean Time (Europe/London)
+
+OS: Ubuntu
+OS Version: 4.15.0-50-generic
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: :0
+Screen size: 3840x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 14 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre
+JVM executable location: 	/opt/Xilinx/Vivado/2017.4/tps/lnx64/jre/bin/java
+
+User name: 	alex
+User home directory: /home/alex
+User working directory: /home/alex/GitHub/zynq-ip-cores/crypto_wrapper
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2017.4
+RDI_DATADIR: /opt/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: /home/alex/.Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: /home/alex/.Xilinx/Vivado/2017.4/
+Vivado layouts directory: /home/alex/.Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	
+Vivado journal file location: 	
+Engine tmp dir: 	./.Xil/Vivado-15041-alex-warc
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 977 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: Sourcing tcl script '/home/alex/.Xilinx/Vivado/Vivado_init.tcl' 
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: crypto_wrapper.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project crypto_wrapper.xpr 
+// [GUI Memory]: 69 MB (+69675kb) [00:00:05]
+// [Engine Memory]: 874 MB (+764496kb) [00:00:05]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 79 MB (+7172kb) [00:00:06]
+// [Engine Memory]: 953 MB (+37127kb) [00:00:06]
+// Tcl Message: open_project crypto_wrapper.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/alex/GitHub/zynq-ip-cores'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,056 MB. GUI used memory: 45 MB. Current time: 6/3/19 3:50:03 PM BST
+// [Engine Memory]: 1,056 MB (+58383kb) [00:00:09]
+// Project name: crypto_wrapper; location: /home/alex/GitHub/zynq-ip-cores/crypto_wrapper; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2); // B (D, cj)
+// x (cj): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // x (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U (q, cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // Z (cj, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ac (cj, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // U (q, cj)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cj)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// ae (cj): Enable Core Container: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ae)
+// TclEventType: RUN_MODIFY
+dismissDialog("Enable Core Container"); // ae (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// [GUI Memory]: 85 MB (+2031kb) [00:00:23]
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: upgrade_ip -srcset present_0 -vlnv user.org:user:present:1.0 [get_ips  present_0] -log ip_upgrade.log 
+// Tcl Message: Upgrading 'present_0' 
+// bs (cj):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [Project 1-386] Moving file '/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/present_0.xci' from fileset 'present_0' to fileset 'sources_1'. INFO: [IP_Flow 19-3422] Upgraded present_0 (present_v1_0 1.0) from revision 4 to revision 5 INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'present_0'... INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips present_0] -no_script -sync -force -quiet 
+dismissDialog("Upgrade IP"); // bs (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,112 MB (+3440kb) [00:00:26]
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cZ, cj)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectTreeTable(PAResourceItoN.IPStatusTablePanel_IP_STATUS_TABLE, "present_0 ; false ; present_0 [present_v1_0] (Up-to-date) ; No changes required ;  ; present_v1_0 ; 1.0 (Rev. 5) ; 1.0 (Rev. 5) ; present_0 [present_v1_0] (Up-to-date) ; xc7z020clg400-1", 3, "present_0", 0, false); // B (O, cj)
+// [GUI Memory]: 90 MB (+336kb) [00:00:28]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,119 MB. GUI used memory: 49 MB. Current time: 6/3/19 3:50:22 PM BST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cj)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cj): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (as)
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Remove Sources"); // as (cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2, false, false, false, false, true, false); // B (D, cj) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cj)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cj): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+dismissDialog("Remove Sources"); // as (cj)
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/present_0.xci] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/present_0.xci 
+// as (cj): Remove Sources: addNotify
+// bs (as):  Remove Sources : addNotify
+dismissDialog("Remove Sources"); // bs (as)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cZ, cj)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+// [GUI Memory]: 95 MB (+805kb) [00:00:48]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,151 MB. GUI used memory: 49 MB. Current time: 6/3/19 3:50:42 PM BST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bs (cj):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // bs (cj)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 2); // O (O, cj)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "present_v1_0 ; AXI4, AXI4-Stream ; Production ; Included ; user.org:user:present:1.0", 5, "present_v1_0", 0, false); // O (O, cj)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "present_v1_0 ; AXI4, AXI4-Stream ; Production ; Included ; user.org:user:present:1.0", 5); // O (O, cj)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "present_v1_0 ; AXI4, AXI4-Stream ; Production ; Included ; user.org:user:present:1.0", 5, "present_v1_0", 0, false, false, false, false, false, true); // O (O, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// r (cj): Customize IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+dismissDialog("Customize IP"); // r (cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name present -vendor user.org -library user -version 1.0 -module_name present_0 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_2/present_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'present_0'... 
+// au (cj): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,174 MB (+6127kb) [00:00:58]
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// bs (cj):  Managing Output Products : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_2/present_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'present_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'present_0'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'present_0'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all present_0] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_2/present_0.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_2/present_0.xci] 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 8 present_0_synth_1 
+// Tcl Message: [Mon Jun  3 15:50:57 2019] Launched present_0_synth_1... Run output will be captured here: /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/present_0_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton (A, G)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cZ, cj)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2, false); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci)]", 2); // B (D, cj)
+// x (cj): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // x (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci), present_0 (present_0.v)]", 3, true); // B (D, cj) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), present : present_0 (present_0.xci), present_0 (present_0.v)]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 1, true); // B (D, cj) - Node
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aF (Q, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,201 MB. GUI used memory: 53 MB. Current time: 6/3/19 3:52:13 PM BST
+// [GUI Memory]: 100 MB (+101kb) [00:04:37]
+// [GUI Memory]: 105 MB (+241kb) [00:04:57]
+// [GUI Memory]: 111 MB (+950kb) [00:05:22]
+// [GUI Memory]: 117 MB (+401kb) [00:05:42]
+// [GUI Memory]: 123 MB (+331kb) [00:06:07]
+// [GUI Memory]: 150 MB (+21779kb) [00:07:14]
+// Elapsed time: 353 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Package IP]", 5, false); // u (O, cj)
+// [GUI Memory]: 166 MB (+8805kb) [00:07:15]
+// bs (cj):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_MESSAGE_RESET
+dismissDialog("Open Project Manager"); // bs (cj)
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// bs (cj):  IP Packager : addNotify
+dismissDialog("IP Packager"); // bs (cj)
+// [GUI Memory]: 180 MB (+5706kb) [00:07:17]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // an (O, cj)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // an (O, cj)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cj)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // an (O, cj)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cj)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [GUI Memory]: 194 MB (+4665kb) [00:07:22]
+// Tcl Message: set_property core_revision 4 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// bs (cj):  Package IP : addNotify
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/alex/GitHub/zynq-ip-cores 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/alex/GitHub/zynq-ip-cores' 
+// [GUI Memory]: 204 MB (+678kb) [00:07:23]
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton (A, G)
+// [Engine Memory]: 1,232 MB (+28kb) [00:07:24]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Command: 'rdi::info_commands {syn*}'
+// Tcl Command: 'rdi::info_commands {synth*}'
+// Tcl Command: 'rdi::info_commands {synth_*}'
+// Tcl Command: 'rdi::info_commands {synth_de*}'
+// Tcl Command: 'rdi::info_commands {synth_de*}'
+// Tcl Command: 'rdi::match_options {synth_design} {}'
+// Tcl Command: 'rdi::match_options {synth_design} {top}'
+// Tcl Command: 'rdi::match_options {synth_design} {}'
+// Tcl Command: 'rdi::match_options {synth_design} {}'
+// Tcl Command: 'rdi::match_options {synth_design} {}'
+// Elapsed time: 29 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "synth_design -top top -mode out_of_context -part x"); // aF (ae, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cj)
+// Elapsed time: 24 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "synth_design -top top -mode out_of_context -part xc7z020clg400-1", true); // aF (ae, cj)
+// Tcl Command: 'synth_design -top top -mode out_of_context -part xc7z020clg400-1'
+// Tcl Command: 'synth_design -top top -mode out_of_context -part xc7z020clg400-1'
+// TclEventType: ELABORATE_START
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: synth_design -top top -mode out_of_context -part xc7z020clg400-1 
+// Tcl Message: Command: synth_design -top top -mode out_of_context -part xc7z020clg400-1 Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020' 
+// bs (cj):  Tcl Command Line : addNotify
+// TclEventType: ELABORATE_FINISH
+// [GUI Memory]: 217 MB (+2676kb) [00:08:26]
+// [Engine Memory]: 1,313 MB (+19489kb) [00:08:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,372 MB. GUI used memory: 76 MB. Current time: 6/3/19 3:58:23 PM BST
+// [Engine Memory]: 1,381 MB (+2856kb) [00:08:31]
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 1,543 MB (+98058kb) [00:08:44]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,543 MB. GUI used memory: 70 MB. Current time: 6/3/19 3:58:42 PM BST
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 6650.336 ; gain = 352.270 ; free physical = 360 ; free virtual = 5064 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Loading Part and Timing Information --------------------------------------------------------------------------------- Loading part: xc7z020clg400-1 --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 6650.336 ; gain = 352.270 ; free physical = 360 ; free virtual = 5064 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Applying 'set_property' XDC Constraints --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 6650.336 ; gain = 352.270 ; free physical = 362 ; free virtual = 5065 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 6650.336 ; gain = 352.270 ; free physical = 362 ; free virtual = 5065 
+// Tcl Message: Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 6650.336 ; gain = 352.270 ; free physical = 354 ; free virtual = 5057 
+// Tcl Message: ---------------------------------------------------------------------------------  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ 
+// Tcl Message: --------------------------------------------------------------------------------- Start Applying XDC Timing Constraints --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6664.320 ; gain = 366.254 ; free physical = 230 ; free virtual = 4930 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Timing Optimization --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6664.320 ; gain = 366.254 ; free physical = 230 ; free virtual = 4930 
+// Tcl Message: ---------------------------------------------------------------------------------  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ --------------------------------------------------------------------------------- Start Technology Mapping --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: ---------------------------------------------------------------------------------  Report RTL Partitions:  +-+--------------+------------+----------+ | |RTL Partition |Replication |Instances | +-+--------------+------------+----------+ +-+--------------+------------+----------+ --------------------------------------------------------------------------------- Start Rebuilding User Hierarchy --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Ports --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Renaming Generated Nets --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- Start Writing Synthesis Report ---------------------------------------------------------------------------------  Report BlackBoxes:  +------+--------------+----------+ |      |BlackBox name |Instances | +------+--------------+----------+ |1     |present_0     |         1| +------+--------------+----------+ 
+// Tcl Message:  Report Cell Usage:  +------+----------+------+ |      |Cell      |Count | +------+----------+------+ |1     |present_0 |     1| +------+----------+------+ 
+// Tcl Message:  Report Instance Areas:  +------+---------+-------+------+ |      |Instance |Module |Cells | +------+---------+-------+------+ |1     |top      |       |    80| +------+---------+-------+------+ --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.336 ; gain = 375.270 ; free physical = 229 ; free virtual = 4929 
+// Tcl Message: --------------------------------------------------------------------------------- Synthesis finished with 0 errors, 0 critical warnings and 0 warnings. Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 6673.336 ; gain = 88.250 ; free physical = 286 ; free virtual = 4986 Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 6673.344 ; gain = 375.270 ; free physical = 286 ; free virtual = 4986 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,673 MB. GUI used memory: 69 MB. Current time: 6/3/19 3:58:55 PM BST
+// [Engine Memory]: 1,675 MB (+57225kb) [00:09:01]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,791 MB (+33551kb) [00:09:01]
+// Xgd.load filename: /opt/Xilinx/Vivado/2017.4/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 0.6s
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Device view-level: 0.0
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 6890.258 ; gain = 592.191 ; free physical = 240 ; free virtual = 4880 
+// Tcl Message: design_1 
+// Elapsed time: 47 seconds
+dismissDialog("Tcl Command Line"); // bs (cj)
+// RouteApi::initDelayMediator elapsed time: 11.2s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// [Engine Memory]: 2,017 MB (+143365kb) [00:09:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,017 MB. GUI used memory: 100 MB. Current time: 6/3/19 3:59:13 PM BST
+// Tcl Command: 'rdi::info_commands {write*}'
+// Tcl Command: 'rdi::info_commands {write_*}'
+// Tcl Command: 'rdi::info_commands {write_ch*}'
+// Tcl Command: 'rdi::info_commands {write_ch*}'
+// Tcl Command: 'rdi::info_commands {write_ch*}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {write_checkpoint} {./} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {write_checkpoint} {./crypto_wrapper.checkpoint/} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {write_checkpoint} {./crypto_wrapper.checkpoint/} {}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {write_checkpoint} {./crypto_wrapper.checkpoint/} {pres.dcp}'
+// Tcl Command: 'rdi::info_commands bd::match_path'
+// Tcl Command: 'bd::match_path {write_checkpoint} {./crypto_wrapper.checkpoint/} {pres.dcp }'
+// Tcl Command: 'rdi::match_options {write_checkpoint} {for}'
+// Tcl Command: 'rdi::match_options {write_checkpoint} {force}'
+// Elapsed time: 57 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "write_checkpoint ./crypto_wrapper.checkpoint/pres.dcp -force", true); // aF (ae, cj)
+// Tcl Command: 'write_checkpoint ./crypto_wrapper.checkpoint/pres.dcp -force'
+// Tcl Command: 'write_checkpoint ./crypto_wrapper.checkpoint/pres.dcp -force'
+// Tcl Message: write_checkpoint ./crypto_wrapper.checkpoint/pres.dcp -force 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. 
+// Tcl Message: INFO: [Common 17-1381] The checkpoint '/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.checkpoint/pres.dcp' has been generated. 
+// Tcl Message: /home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.checkpoint/pres.dcp 
+// [Engine Memory]: 2,169 MB (+53607kb) [00:10:03]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,170 MB. GUI used memory: 114 MB. Current time: 6/3/19 3:59:57 PM BST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,195 MB. GUI used memory: 98 MB. Current time: 6/3/19 4:10:03 PM BST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// x (cj): Invalid Top Module: addNotify
+// Elapsed time: 612 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Invalid Top Module"); // x (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aF (Q, cj)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v)]", 1); // B (D, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_FAILED
+// Elapsed time: 30 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cZ, cj)
+// bs (cj):  Reloading : addNotify
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,265 MB. GUI used memory: 94 MB. Current time: 6/3/19 4:10:43 PM BST
+// Engine heap size: 2,265 MB. GUI used memory: 95 MB. Current time: 6/3/19 4:10:43 PM BST
+// Tcl Message: refresh_design 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,223 MB. GUI used memory: 71 MB. Current time: 6/3/19 4:10:44 PM BST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+dismissDialog("Reloading"); // bs (cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v)]", 1); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v), present : present_0 (present_0.xci), present_0 (present_0.v)]", 3, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v), present : present_0 (present_0.xci), present_0 (present_0.v)]", 3, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("present_0.v", 25, 259); // D (w, cj)
+selectCodeEditor("present_0.v", 25, 259, false, false, false, false, true); // D (w, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, crypto_top (top.v), present : present_0 (present_0.xci), present_0 (present_0.v)]", 3, true); // B (D, cj) - Node
+// TclEventType: RUN_FAILED
+// [Engine Memory]: 2,408 MB (+135949kb) [00:36:15]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,408 MB. GUI used memory: 102 MB. Current time: 6/3/19 4:26:13 PM BST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_COMPLETED
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,408 MB. GUI used memory: 101 MB. Current time: 6/3/19 4:56:13 PM BST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE

@@ -1,0 +1,1314 @@
+
+*** Running vivado
+    with args -log present_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source present_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script '/home/alex/.Xilinx/Vivado/Vivado_init.tcl'
+source present_0.tcl -notrace
+Command: synth_design -top present_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11167 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1305.660 ; gain = 89.996 ; free physical = 1421 ; free virtual = 6447
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'present_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/synth/present_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'top' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/new/top.v:23]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'present_v1_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'present_v1_0_S00_AXI' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0_S00_AXI.v:234]
+INFO: [Synth 8-226] default block is never used [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0_S00_AXI.v:375]
+INFO: [Synth 8-256] done synthesizing module 'present_v1_0_S00_AXI' (1#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'PRESENT' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present.v:15]
+	Parameter b_64 bound to: 64 - type: integer 
+	Parameter b_80 bound to: 80 - type: integer 
+	Parameter b_2 bound to: 2 - type: integer 
+	Parameter b_4 bound to: 4 - type: integer 
+	Parameter b_5 bound to: 5 - type: integer 
+	Parameter b_32 bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'present_ENC' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_enc.v:16]
+	Parameter b_64 bound to: 64 - type: integer 
+	Parameter b_80 bound to: 80 - type: integer 
+	Parameter b_2 bound to: 2 - type: integer 
+	Parameter b_4 bound to: 4 - type: integer 
+	Parameter b_5 bound to: 5 - type: integer 
+	Parameter b_32 bound to: 32 - type: integer 
+	Parameter time_key bound to: 1 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter ENCODE bound to: 3'b010 
+	Parameter DONE bound to: 3'b100 
+	Parameter max_rounds bound to: 31 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'sbox' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/sbox.v:14]
+INFO: [Synth 8-256] done synthesizing module 'sbox' (2#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/sbox.v:14]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_enc.v:92]
+INFO: [Synth 8-638] synthesizing module 'pbox' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/pbox.v:14]
+	Parameter b_64 bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'pbox' (3#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/pbox.v:14]
+INFO: [Synth 8-256] done synthesizing module 'present_ENC' (4#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_enc.v:16]
+INFO: [Synth 8-638] synthesizing module 'present_DEC' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_dec.v:15]
+	Parameter b_64 bound to: 64 - type: integer 
+	Parameter b_80 bound to: 80 - type: integer 
+	Parameter b_2 bound to: 2 - type: integer 
+	Parameter b_4 bound to: 4 - type: integer 
+	Parameter b_5 bound to: 5 - type: integer 
+	Parameter b_32 bound to: 32 - type: integer 
+	Parameter time_key bound to: 1 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter DECODE bound to: 3'b010 
+	Parameter WAIT bound to: 3'b011 
+	Parameter DONE bound to: 3'b100 
+	Parameter max_rounds bound to: 5'b11111 
+INFO: [Synth 8-638] synthesizing module 'sbox_inv' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/sbox_inv.v:14]
+INFO: [Synth 8-256] done synthesizing module 'sbox_inv' (5#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/sbox_inv.v:14]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_dec.v:93]
+INFO: [Synth 8-638] synthesizing module 'pbox_inv' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/pbox_inv.v:16]
+	Parameter b_64 bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'pbox_inv' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/pbox_inv.v:16]
+INFO: [Synth 8-256] done synthesizing module 'present_DEC' (7#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_dec.v:15]
+INFO: [Synth 8-638] synthesizing module 'subkey_gen' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/roundkey.v:17]
+	Parameter b_64 bound to: 64 - type: integer 
+	Parameter b_80 bound to: 80 - type: integer 
+	Parameter round bound to: 32 - type: integer 
+	Parameter b_5 bound to: 5 - type: integer 
+	Parameter b_4 bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'subkey_gen' (8#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/roundkey.v:17]
+WARNING: [Synth 8-6014] Unused sequential element encoder_ready_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present.v:174]
+INFO: [Synth 8-256] done synthesizing module 'PRESENT' (9#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present.v:15]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/synth/axis_dwidth_converter_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SS_TKEEP_REQUIRED bound to: 0 - type: integer 
+	Parameter P_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter P_S_RATIO bound to: 2 - type: integer 
+	Parameter P_M_RATIO bound to: 1 - type: integer 
+	Parameter P_D2_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter P_D1_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter P_D2_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter P_D3_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter P_D1_REG_CONFIG bound to: 0 - type: integer 
+	Parameter P_D3_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_upsizer' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_RATIO bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_READY_EXIST bound to: 1'b1 
+	Parameter P_DATA_EXIST bound to: 1'b1 
+	Parameter P_STRB_EXIST bound to: 1'b0 
+	Parameter P_KEEP_EXIST bound to: 1'b0 
+	Parameter P_LAST_EXIST bound to: 1'b0 
+	Parameter P_ID_EXIST bound to: 1'b0 
+	Parameter P_DEST_EXIST bound to: 1'b0 
+	Parameter P_USER_EXIST bound to: 1'b0 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 8 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b101 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b010 
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_upsizer' (10#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 32 - type: integer 
+	Parameter P_TLAST_INDX bound to: 32 - type: integer 
+	Parameter P_TID_INDX bound to: 32 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (11#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice' (12#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 32 - type: integer 
+	Parameter P_TLAST_INDX bound to: 32 - type: integer 
+	Parameter P_TID_INDX bound to: 32 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (13#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+WARNING: [Synth 8-350] instance 'axis_register_slice_0' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 64 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 64 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 64 - type: integer 
+	Parameter P_TLAST_INDX bound to: 64 - type: integer 
+	Parameter P_TID_INDX bound to: 64 - type: integer 
+	Parameter P_TDEST_INDX bound to: 64 - type: integer 
+	Parameter P_TUSER_INDX bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice__parameterized0' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 64 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 64 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 64 - type: integer 
+	Parameter P_TLAST_INDX bound to: 64 - type: integer 
+	Parameter P_TID_INDX bound to: 64 - type: integer 
+	Parameter P_TDEST_INDX bound to: 64 - type: integer 
+	Parameter P_TUSER_INDX bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice__parameterized0' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+WARNING: [Synth 8-350] instance 'axis_register_slice_1' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter' (15#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_0' (16#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/synth/axis_dwidth_converter_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_1' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_1/synth/axis_dwidth_converter_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SS_TKEEP_REQUIRED bound to: 0 - type: integer 
+	Parameter P_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter P_S_RATIO bound to: 1 - type: integer 
+	Parameter P_M_RATIO bound to: 2 - type: integer 
+	Parameter P_D2_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter P_D1_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter P_D2_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter P_D3_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter P_D1_REG_CONFIG bound to: 0 - type: integer 
+	Parameter P_D3_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_downsizer' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_RATIO bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 8 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter P_RATIO_WIDTH bound to: 1 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b010 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b110 
+WARNING: [Synth 8-6014] Unused sequential element r0_is_null_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:311]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_downsizer' (17#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+WARNING: [Synth 8-350] instance 'axis_register_slice_0' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+WARNING: [Synth 8-350] instance 'axis_register_slice_1' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0' (17#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_1' (18#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_1/synth/axis_dwidth_converter_1.v:57]
+WARNING: [Synth 8-3848] Net m00_axis_tdata in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:66]
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:67]
+WARNING: [Synth 8-3848] Net m00_axis_tlast in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:68]
+WARNING: [Synth 8-3848] Net in_m_axis_tready in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:129]
+WARNING: [Synth 8-3848] Net out_s_axis_tvalid in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:134]
+WARNING: [Synth 8-3848] Net out_m_axis_tready in module/entity present_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:139]
+INFO: [Synth 8-256] done synthesizing module 'present_v1_0' (19#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:4]
+INFO: [Synth 8-256] done synthesizing module 'top' (20#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/new/top.v:23]
+INFO: [Synth 8-256] done synthesizing module 'present_0' (21#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/synth/present_0.v:56]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TLAST
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TLAST
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[7]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[6]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[5]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[4]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[3]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tuser[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[3]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tuser[0]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design present_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tlast
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design present_v1_0 has unconnected port m00_axis_tready
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1353.191 ; gain = 137.527 ; free physical = 1424 ; free virtual = 6451
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_0:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_1:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_0:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_1:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+WARNING: [Synth 8-3295] tying undriven pin input_axis:m_axis_tready to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:179]
+WARNING: [Synth 8-3295] tying undriven pin output_axis:s_axis_tvalid to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:197]
+WARNING: [Synth 8-3295] tying undriven pin output_axis:m_axis_tready to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/hdl/present_v1_0.v:197]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1353.191 ; gain = 137.527 ; free physical = 1428 ; free virtual = 6455
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/present_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/present_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1741.434 ; gain = 0.000 ; free physical = 1073 ; free virtual = 6100
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 1105 ; free virtual = 6134
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 1105 ; free virtual = 6134
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/present/input_axis. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/present/output_axis. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 1107 ; free virtual = 6136
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_enc.v:158]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'present_DEC'
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_dec.v:164]
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/roundkey.v:81]
+INFO: [Synth 8-5546] ROM "key_mem_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "key_mem_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axis_dwidth_converter_v1_1_14_axisc_upsizer'
+INFO: [Synth 8-5544] ROM "r0_reg_sel0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "key_cnt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              001
+                    WAIT |                               01 |                              011
+                  DECODE |                               10 |                              010
+                    DONE |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'present_DEC'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                SM_RESET |                            00010 |                              000
+                 SM_IDLE |                            00001 |                              001
+               SM_ACTIVE |                            01000 |                              101
+                  SM_END |                            00100 |                              011
+        SM_END_TO_ACTIVE |                            10000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axis_dwidth_converter_v1_1_14_axisc_upsizer'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 1082 ; free virtual = 6115
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     80 Bit         XORs := 2     
+	   2 Input     64 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 1     
++---Registers : 
+	               80 Bit    Registers := 2     
+	               64 Bit    Registers := 40    
+	               32 Bit    Registers := 11    
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 49    
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 4     
+	   4 Input     80 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 4     
+	   4 Input     64 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 1     
+	  15 Input      5 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 68    
+	   4 Input      1 Bit        Muxes := 35    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module present_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+Module present_ENC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 12    
+Module present_DEC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 11    
+Module subkey_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      5 Bit         XORs := 1     
++---Registers : 
+	               80 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module PRESENT 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     80 Bit         XORs := 2     
++---Registers : 
+	               80 Bit    Registers := 1     
+	               64 Bit    Registers := 34    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     80 Bit        Muxes := 2     
+	   4 Input     80 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 38    
+	   4 Input      1 Bit        Muxes := 8     
+Module axis_dwidth_converter_v1_1_14_axisc_upsizer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  15 Input      5 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module axis_register_slice_v1_1_15_axis_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_register_slice_v1_1_15_axis_register_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_dwidth_converter_v1_1_14_axis_dwidth_converter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_dwidth_converter_v1_1_14_axisc_downsizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module present_v1_0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input     64 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_enc.v:158]
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/present_dec.v:164]
+WARNING: [Synth 8-6014] Unused sequential element cntr_val_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/imports/present_1.0/hdl/roundkey.v:81]
+INFO: [Synth 8-4471] merging register 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_dest_reg[0:0]' into 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:706]
+INFO: [Synth 8-4471] merging register 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_user_reg[3:0]' into 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_strb_reg[3:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:707]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:702]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:703]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:711]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_id_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:705]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_id_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:723]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:706]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:724]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:707]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_0/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_1/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_last_reg' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_dest_reg[0:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_dest_reg[0:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_user_reg[7:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_strb_reg[7:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_user_reg[3:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_strb_reg[3:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_last_reg' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:288]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:288]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:289]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:289]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_0/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_1/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/present_0_1/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tlast
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design present_0 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design present_0 has unconnected port m00_axis_tready
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_ENC/max_val_reg[3]' (FDSE) to 'inst/present/present/present_ENC/max_val_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_ENC/max_val_reg[0]' (FDSE) to 'inst/present/present/present_ENC/max_val_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_ENC/max_val_reg[1]' (FDSE) to 'inst/present/present/present_ENC/max_val_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/present/present /present_ENC/\max_val_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_DEC/max_val_reg[0]' (FDSE) to 'inst/present/present/present_DEC/max_val_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_DEC/max_val_reg[1]' (FDSE) to 'inst/present/present/present_DEC/max_val_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/present/present /present_DEC/\max_val_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/present/present/present_DEC/max_val_reg[3]' (FDSE) to 'inst/present/present/present_DEC/max_val_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/present/present_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/present/present_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/present/present_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (max_val_reg[2]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (header_done_reg) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (max_val_reg[2]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (header_done_reg) is unused and will be removed from module present_DEC.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3332] Sequential element (inst/present/present_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module present_0.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/input_axis /\inst/gen_upsizer_conversion.axisc_upsizer_0/r0_last_reg )
+INFO: [Synth 8-3332] Sequential element (inst/gen_upsizer_conversion.axisc_upsizer_0/r0_last_reg) is unused and will be removed from module axis_dwidth_converter_0.
+INFO: [Synth 8-3332] Sequential element (inst/gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0]) is unused and will be removed from module axis_dwidth_converter_1.
+INFO: [Synth 8-3332] Sequential element (inst/gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0]) is unused and will be removed from module axis_dwidth_converter_1.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/\rxorer_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_ENC/time_key_gen_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/\rxorer_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /present_DEC/time_key_gen_reg)
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[20]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[18]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[19]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[16]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[17]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[21]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[26]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[24]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[25]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[22]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[23]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[27]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[30]' (FDE) to 'inst/present/present/key_val_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[31]' (FDE) to 'inst/present/present/key_val_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/present/present/key_val_reg[28]' (FDE) to 'inst/present/present/key_val_reg[29]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/present/present /\key_val_reg[29] )
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[31]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[30]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[29]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[28]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[27]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[26]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[25]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[24]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[23]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[22]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[21]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[20]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[19]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[18]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[17]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[16]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[15]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[14]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[13]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[12]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[11]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[10]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[9]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[8]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[7]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[6]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[5]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[4]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[3]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[2]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[1]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[0]) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (time_key_gen_reg) is unused and will be removed from module present_ENC.
+WARNING: [Synth 8-3332] Sequential element (hdr_flag_reg) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[31]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[30]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[29]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[28]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[27]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[26]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[25]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[24]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[23]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[22]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[21]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[20]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[19]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[18]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[17]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[16]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[15]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[14]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[13]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[12]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[11]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[10]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[9]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[8]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[7]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[6]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[5]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[4]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[3]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[2]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[1]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (rxorer_reg[0]) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (time_key_gen_reg) is unused and will be removed from module present_DEC.
+WARNING: [Synth 8-3332] Sequential element (key_val_reg[29]) is unused and will be removed from module PRESENT.
+INFO: [Synth 8-3332] Sequential element (inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[0]) is unused and will be removed from module axis_dwidth_converter_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 1033 ; free virtual = 6067
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-----------------------+------------------+-----------+----------------------+---------------+
+|Module Name            | RTL Object       | Inference | Size (Depth x Width) | Primitives    | 
++-----------------------+------------------+-----------+----------------------+---------------+
+|\inst/present/present  | time_key_mem_reg | Implied   | 32 x 64              | RAM32M x 22   | 
++-----------------------+------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 812 ; free virtual = 5847
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 1741.434 ; gain = 525.770 ; free physical = 806 ; free virtual = 5841
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++-----------------------+------------------+-----------+----------------------+---------------+
+|Module Name            | RTL Object       | Inference | Size (Depth x Width) | Primitives    | 
++-----------------------+------------------+-----------+----------------------+---------------+
+|\inst/present/present  | time_key_mem_reg | Implied   | 32 x 64              | RAM32M x 22   | 
++-----------------------+------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 814 ; free virtual = 5849
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin inst/present/input_axis:m_axis_tready to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst/present/output_axis:s_axis_tvalid to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst/present/output_axis:m_axis_tready to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 856 ; free virtual = 5890
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 853 ; free virtual = 5887
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 821 ; free virtual = 5856
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 821 ; free virtual = 5855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 812 ; free virtual = 5847
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 812 ; free virtual = 5847
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |    10|
+|2     |LUT2   |   275|
+|3     |LUT3   |    60|
+|4     |LUT4   |   104|
+|5     |LUT5   |    15|
+|6     |LUT6   |  1439|
+|7     |MUXF7  |   512|
+|8     |MUXF8  |   256|
+|9     |RAM32M |    22|
+|10    |FDRE   |  3066|
+|11    |FDSE   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+|      |Instance                                               |Module                                                              |Cells |
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+|1     |top                                                    |                                                                    |  5770|
+|2     |  inst                                                 |top                                                                 |  5770|
+|3     |    present                                            |present_v1_0                                                        |  5770|
+|4     |      input_axis                                       |axis_dwidth_converter_0                                             |   126|
+|5     |        inst                                           |axis_dwidth_converter_v1_1_14_axis_dwidth_converter                 |   126|
+|6     |          \gen_upsizer_conversion.axisc_upsizer_0      |axis_dwidth_converter_v1_1_14_axisc_upsizer                         |   124|
+|7     |      output_axis                                      |axis_dwidth_converter_1                                             |   140|
+|8     |        inst                                           |axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 |   140|
+|9     |          \gen_downsizer_conversion.axisc_downsizer_0  |axis_dwidth_converter_v1_1_14_axisc_downsizer                       |   138|
+|10    |      present                                          |PRESENT                                                             |  4873|
+|11    |        present_DEC                                    |present_DEC                                                         |  1177|
+|12    |        present_ENC                                    |present_ENC                                                         |  1199|
+|13    |        subkey_gen                                     |subkey_gen                                                          |   224|
+|14    |      present_v1_0_S00_AXI_inst                        |present_v1_0_S00_AXI                                                |   362|
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.457 ; gain = 525.793 ; free physical = 812 ; free virtual = 5847
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 117 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1741.457 ; gain = 137.551 ; free physical = 859 ; free virtual = 5894
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:55 . Memory (MB): peak = 1741.465 ; gain = 525.793 ; free physical = 859 ; free virtual = 5894
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 790 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 22 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 22 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+230 Infos, 213 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:57 . Memory (MB): peak = 1773.473 ; gain = 582.637 ; free physical = 935 ; free virtual = 5970
+INFO: [Common 17-1381] The checkpoint '/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/present_0_synth_1/present_0.dcp' has been generated.
