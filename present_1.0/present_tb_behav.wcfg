@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1000000001fs"></ZoomEndTime>
-      <Cursor1Time time="815000000fs"></Cursor1Time>
+      <ZoomEndTime time="1660000001fs"></ZoomEndTime>
+      <Cursor1Time time="1075000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="119" />
+   <WVObjectSize size="168" />
    <wvobject type="logic" fp_name="/present_tb/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -76,9 +76,9 @@
       <obj_property name="ElementShortName">M_B_VALID</obj_property>
       <obj_property name="ObjectShortName">M_B_VALID</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/present_tb/M_B_RESP">
-      <obj_property name="ElementShortName">M_B_RESP</obj_property>
-      <obj_property name="ObjectShortName">M_B_RESP</obj_property>
+   <wvobject type="array" fp_name="/present_tb/M_B_RESP">
+      <obj_property name="ElementShortName">M_B_RESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_B_RESP[1:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/present_tb/S_AXIS_VALID">
       <obj_property name="ElementShortName">S_AXIS_VALID</obj_property>
@@ -104,18 +104,6 @@
       <obj_property name="ElementShortName">M_AXIS_DATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">M_AXIS_DATA[31:0]</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/present_tb/AES_DONE">
-      <obj_property name="ElementShortName">AES_DONE</obj_property>
-      <obj_property name="ObjectShortName">AES_DONE</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/present_tb/STATUS_0">
-      <obj_property name="ElementShortName">STATUS_0</obj_property>
-      <obj_property name="ObjectShortName">STATUS_0</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/present_tb/STATUS_1">
-      <obj_property name="ElementShortName">STATUS_1</obj_property>
-      <obj_property name="ObjectShortName">STATUS_1</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/present_tb/PERIOD">
       <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
       <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
@@ -123,6 +111,14 @@
    <wvobject type="array" fp_name="/present_tb/dut/sel">
       <obj_property name="ElementShortName">sel[1:0]</obj_property>
       <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/select_prev">
+      <obj_property name="ElementShortName">select_prev[2:0]</obj_property>
+      <obj_property name="ObjectShortName">select_prev[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/select">
+      <obj_property name="ElementShortName">select[2:0]</obj_property>
+      <obj_property name="ObjectShortName">select[2:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/present_tb/dut/key_cnt">
       <obj_property name="ElementShortName">key_cnt[10:0]</obj_property>
@@ -496,5 +492,205 @@
    <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/max_rounds">
       <obj_property name="ElementShortName">max_rounds[4:0]</obj_property>
       <obj_property name="ObjectShortName">max_rounds[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider127" type="divider">
+      <obj_property name="label">ACI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/mode_out">
+      <obj_property name="ElementShortName">mode_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode_out[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/mode_in">
+      <obj_property name="ElementShortName">mode_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_0">
+      <obj_property name="ElementShortName">key_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_1">
+      <obj_property name="ElementShortName">key_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_2">
+      <obj_property name="ElementShortName">key_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWADDR">
+      <obj_property name="ElementShortName">S_AXI_AWADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWPROT">
+      <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWVALID">
+      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWREADY">
+      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WDATA">
+      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WSTRB">
+      <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WVALID">
+      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WREADY">
+      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BRESP">
+      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BVALID">
+      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BREADY">
+      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARADDR">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARPROT">
+      <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARVALID">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARREADY">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RRESP">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RVALID">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RREADY">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_awaddr">
+      <obj_property name="ElementShortName">axi_awaddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_awaddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_awready">
+      <obj_property name="ElementShortName">axi_awready</obj_property>
+      <obj_property name="ObjectShortName">axi_awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_wready">
+      <obj_property name="ElementShortName">axi_wready</obj_property>
+      <obj_property name="ObjectShortName">axi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_bresp">
+      <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_bvalid">
+      <obj_property name="ElementShortName">axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_araddr">
+      <obj_property name="ElementShortName">axi_araddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_arready">
+      <obj_property name="ElementShortName">axi_arready</obj_property>
+      <obj_property name="ObjectShortName">axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rdata">
+      <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rresp">
+      <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rvalid">
+      <obj_property name="ElementShortName">axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg0">
+      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg1">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg2">
+      <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg3">
+      <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg_rden">
+      <obj_property name="ElementShortName">slv_reg_rden</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg_wren">
+      <obj_property name="ElementShortName">slv_reg_wren</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/reg_data_out">
+      <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/byte_index">
+      <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/aw_en">
+      <obj_property name="ElementShortName">aw_en</obj_property>
+      <obj_property name="ObjectShortName">aw_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/ADDR_LSB">
+      <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS">
+      <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
    </wvobject>
 </wave_config>
