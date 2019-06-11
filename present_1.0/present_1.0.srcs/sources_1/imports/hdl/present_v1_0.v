@@ -70,15 +70,15 @@
 	);
 	
     wire [1:0] sel;
-    reg enc_start, dec_start;
+    reg enc_start = 0, dec_start = 0;
     reg [63:0] enc_in;
     wire [63:0] enc_out;
     wire enc_ready;
     reg [63:0] dec_in;
     wire [63:0] dec_out;
     wire dec_ready;
-    wire enc_hdr_start;
-    wire dec_hdr_start; 
+    reg enc_hdr_start=0;
+    reg dec_hdr_start=0; 
     reg [63:0] out;
     wire [63:0] in;
     wire [31:0] key_0, key_1, key_2;
@@ -141,6 +141,9 @@
     
     reg generate_key = 0;
     wire gen_key;
+    reg pres_rst = 0;
+    
+    wire enc_hdr_done;
 	
     PRESENT present (
             //encoder path
@@ -148,7 +151,7 @@
         .enc_ciphertext(enc_out),
         .enc_start(enc_start), 
         .enc_ready(enc_ready),
-        .enc_hdr_start(enc_start),
+        .enc_hdr_start(enc_hdr_start),
         .enc_hdr_done(),
     //    encoder_ready,
         
@@ -163,10 +166,10 @@
         // Key
         .key(key),
         .generate_key(generate_key), // generate subkeys
-        .gen_key(),
+        .gen_key(gen_key),
         // Clk,Rst
         .clk_in(s00_axis_aclk), 
-        .rst_in(s00_axis_aresetn)
+        .rst_in(pres_rst)
     );
     
     // AXIS IN
@@ -209,51 +212,69 @@
     // Mode Select
 //    assign in_m_axis_tready = sel ? dec_ready : enc_ready;
     
-    reg [2:0] key_cnt = 0;
-    
+    reg [10:0] key_cnt = 0;
+    reg key_in_progress = 0;
+    localparam IDLE = 0;
+    localparam GEN_KEY = 3;
+    localparam DEC = 1;
+    localparam ENC = 2;
+
     
     always @ (posedge s00_axis_aclk) begin
-      case (sel)
-      
-        0 : begin
-                enc_start <= 0;
-                dec_start <= 0;
-                out <= 0;
-                enc_in <= 0;
-                dec_in <= 0;
-                key_cnt <= 0;
-            end
-        1 : begin
-                enc_start <= 1;
-                dec_start <= 0;
-                out <= enc_out;
-                enc_in <= in;
-                dec_in <= 0;
-                key_cnt <= 0;
-               end
-        2 : begin
-                enc_start <= 0;
-                dec_start <= 1;
-                out <= dec_out;
-                dec_in <= in;
-                enc_in <= 0;
-                key_cnt <= 0;
-               end
-        3 : begin
-               enc_start <= 0;
-               dec_start <= 0;
-               out <= 0;
-               dec_in <= 0;
-               enc_in <= 0;
-               generate_key <= 1;
-               if(key_cnt == 2) begin
-                  generate_key <= 0;
-               end
-               else begin
-                  key_cnt <= key_cnt + 1;
-               end
-              end
-      endcase
+        if(!s00_axis_aresetn) begin
+        
+        end
+        else begin
+          case (sel)
+            IDLE : begin
+                    enc_start <= 0;
+                    dec_start <= 0;
+                    out <= 0;
+                    enc_in <= 0;
+                    dec_in <= 0;
+                    key_cnt <= 0;
+                end
+            DEC : begin
+                    enc_start <= 1;
+                    dec_start <= 0;
+                    out <= enc_out;
+                    enc_in <= in;
+                    dec_in <= 0;
+                    key_cnt <= 0;
+                   end
+            ENC : begin
+                    enc_start <= 0;
+                    dec_start <= 1;
+                    out <= dec_out;
+                    dec_in <= in;
+                    enc_in <= 0;
+                    key_cnt <= 0;
+                   end
+            GEN_KEY : begin
+                   pres_rst <= 1;
+    //               enc_start <= 0;
+    //               dec_start <= 0;
+                   out <= 0;
+                   dec_in <= 0;
+    //               enc_in <= 0;
+                   if(gen_key | key_in_progress) begin
+                        key_in_progress <= 1;
+                        key_cnt <= key_cnt + 1;
+                        if(key_cnt == 32) begin
+                            key_cnt <= 0;
+                            key_in_progress <= 0; 
+                            enc_hdr_start <= 1;
+                            enc_in <= in;
+                        end
+                   end
+                   if(enc_hdr_done) begin
+                        enc_hdr_start <= 0;
+                        enc_start <= 1;
+                        enc_in <= in;
+                   end
+                  end
+          endcase
+        end
     end
 
 

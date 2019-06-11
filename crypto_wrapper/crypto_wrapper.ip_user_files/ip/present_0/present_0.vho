@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:present:1.0
--- IP Revision: 10
+-- IP Revision: 12
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -88,7 +88,8 @@ COMPONENT present_0
     m00_axis_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m00_axis_tstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     m00_axis_tlast : OUT STD_LOGIC;
-    m00_axis_tready : IN STD_LOGIC
+    m00_axis_tready : IN STD_LOGIC;
+    led_status : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -133,7 +134,8 @@ your_instance_name : present_0
     m00_axis_tdata => m00_axis_tdata,
     m00_axis_tstrb => m00_axis_tstrb,
     m00_axis_tlast => m00_axis_tlast,
-    m00_axis_tready => m00_axis_tready
+    m00_axis_tready => m00_axis_tready,
+    led_status => led_status
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

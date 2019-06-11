@@ -1,0 +1,1358 @@
+
+*** Running vivado
+    with args -log aes_v1_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_v1_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script '/home/alex/.Xilinx/Vivado/Vivado_init.tcl'
+source aes_v1_0_0.tcl -notrace
+Command: synth_design -top aes_v1_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2942 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1336.000 ; gain = 91.000 ; free physical = 321 ; free virtual = 23726
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'aes_v1_0_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/synth/aes_v1_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'top' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/new/top.v:23]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'aes_v1_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:4]
+	Parameter C_CRYPTO_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'aes_v1_0_S00_AXI' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0_S00_AXI.v:237]
+INFO: [Synth 8-226] default block is never used [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0_S00_AXI.v:378]
+INFO: [Synth 8-256] done synthesizing module 'aes_v1_0_S00_AXI' (1#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0_S00_AXI.v:4]
+WARNING: [Synth 8-350] instance 'aes_v1_0_S00_AXI_inst' of module 'aes_v1_0_S00_AXI' requires 25 connections, but only 23 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:87]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_1' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_1/synth/axis_dwidth_converter_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SS_TKEEP_REQUIRED bound to: 0 - type: integer 
+	Parameter P_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter P_S_RATIO bound to: 4 - type: integer 
+	Parameter P_M_RATIO bound to: 1 - type: integer 
+	Parameter P_D2_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter P_D1_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter P_D2_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter P_D3_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter P_D1_REG_CONFIG bound to: 0 - type: integer 
+	Parameter P_D3_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_upsizer' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_READY_EXIST bound to: 1'b1 
+	Parameter P_DATA_EXIST bound to: 1'b1 
+	Parameter P_STRB_EXIST bound to: 1'b0 
+	Parameter P_KEEP_EXIST bound to: 1'b0 
+	Parameter P_LAST_EXIST bound to: 1'b0 
+	Parameter P_ID_EXIST bound to: 1'b0 
+	Parameter P_DEST_EXIST bound to: 1'b0 
+	Parameter P_USER_EXIST bound to: 1'b0 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 16 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b101 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b010 
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_upsizer' (2#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 32 - type: integer 
+	Parameter P_TLAST_INDX bound to: 32 - type: integer 
+	Parameter P_TID_INDX bound to: 32 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (3#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice' (4#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 32 - type: integer 
+	Parameter P_TLAST_INDX bound to: 32 - type: integer 
+	Parameter P_TID_INDX bound to: 32 - type: integer 
+	Parameter P_TDEST_INDX bound to: 32 - type: integer 
+	Parameter P_TUSER_INDX bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (5#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+WARNING: [Synth 8-350] instance 'axis_register_slice_0' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 128 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 128 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 128 - type: integer 
+	Parameter P_TLAST_INDX bound to: 128 - type: integer 
+	Parameter P_TID_INDX bound to: 128 - type: integer 
+	Parameter P_TDEST_INDX bound to: 128 - type: integer 
+	Parameter P_TUSER_INDX bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axisc_register_slice__parameterized0' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:556]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 128 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 128 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 128 - type: integer 
+	Parameter P_TLAST_INDX bound to: 128 - type: integer 
+	Parameter P_TID_INDX bound to: 128 - type: integer 
+	Parameter P_TDEST_INDX bound to: 128 - type: integer 
+	Parameter P_TUSER_INDX bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_15_axis_register_slice__parameterized0' (6#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1325]
+WARNING: [Synth 8-350] instance 'axis_register_slice_1' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter' (7#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_1' (8#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_1/synth/axis_dwidth_converter_1.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/synth/axis_dwidth_converter_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SS_TKEEP_REQUIRED bound to: 0 - type: integer 
+	Parameter P_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter P_S_RATIO bound to: 1 - type: integer 
+	Parameter P_M_RATIO bound to: 4 - type: integer 
+	Parameter P_D2_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter P_D1_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter P_D2_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter P_D3_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter P_D1_REG_CONFIG bound to: 0 - type: integer 
+	Parameter P_D3_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_downsizer' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 128 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000000011 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 16 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter P_RATIO_WIDTH bound to: 2 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b010 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b110 
+WARNING: [Synth 8-6014] Unused sequential element r0_is_null_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:311]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axisc_downsizer' (9#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+WARNING: [Synth 8-350] instance 'axis_register_slice_0' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+WARNING: [Synth 8-350] instance 'axis_register_slice_1' of module 'axis_register_slice_v1_1_15_axis_register_slice' requires 22 connections, but only 21 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0' (9#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-256] done synthesizing module 'axis_dwidth_converter_0' (10#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/synth/axis_dwidth_converter_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'aes_wrapper' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_wrapper.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'aes_module' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_module.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'encryption_module' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/encryption_module.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'cipher_cu' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/cipher_cu.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'cipher_cu' (11#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/cipher_cu.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'cipher' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/cipher.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'state_reg' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/state_reg.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'state_reg' (12#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/state_reg.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'cipher' (13#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/cipher.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'counter' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/counter.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'counter' (14#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/counter.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'encryption_module' (15#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/encryption_module.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'decryption_module' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/decryption_module.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'inv_cipher_cu' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/inv_cipher_cu.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'inv_cipher_cu' (16#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/inv_cipher_cu.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'inv_cipher' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/inv_cipher.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'inv_cipher' (17#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/inv_cipher.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'decrementor' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/decrementor.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'decrementor' (18#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/decrementor.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'decryption_module' (19#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/decryption_module.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'key_expansion' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expansion.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'key_expander' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expander.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'key_expander' (20#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expander.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'dp_ram' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/dp_ram.vhd:48]
+	Parameter address_width bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'dp_ram' (21#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/dp_ram.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'key_expansion_cu' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expansion_cu.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'key_expansion_cu' (22#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expansion_cu.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'key_expansion' (23#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/key_expansion.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'aes_module_cu' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_module_cu.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'aes_module_cu' (24#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_module_cu.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'aes_module' (25#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_module.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'aes_wrapper' (26#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_wrapper.vhd:44]
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity aes_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:71]
+WARNING: [Synth 8-3848] Net m00_axis_tlast in module/entity aes_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:72]
+WARNING: [Synth 8-3848] Net s_crypto_axis_tvalid in module/entity aes_v1_0 does not have driver. [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:149]
+INFO: [Synth 8-256] done synthesizing module 'aes_v1_0' (27#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:4]
+WARNING: [Synth 8-350] instance 'aes' of module 'aes_v1_0' requires 38 connections, but only 35 given [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/new/top.v:78]
+INFO: [Synth 8-256] done synthesizing module 'top' (28#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/new/top.v:23]
+INFO: [Synth 8-256] done synthesizing module 'aes_v1_0_0' (29#1) [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/synth/aes_v1_0_0.v:56]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TSTRB[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TKEEP[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TLAST
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_15_axisc_register_slice__parameterized0 has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[15]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[14]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[13]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[12]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[11]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[10]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[9]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[8]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TSTRB[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[15]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[14]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[13]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[12]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[11]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[10]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[9]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[8]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TKEEP[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TLAST
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[15]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[14]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[13]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[12]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[11]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[10]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[9]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[8]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[7]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[6]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[5]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[4]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[15]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[14]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[13]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[12]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[11]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[10]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[9]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[8]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[7]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[6]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[5]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[4]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[3]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 has unconnected port s_axis_tuser[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[3]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_14_axis_dwidth_converter has unconnected port s_axis_tuser[0]
+WARNING: [Synth 8-3331] design aes_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design aes_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design aes_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design aes_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1409.531 ; gain = 164.531 ; free physical = 316 ; free virtual = 23722
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_0:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_1:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_0:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1005]
+INFO: [Synth 8-3295] tying undriven pin axis_register_slice_1:aclk2x to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:1137]
+WARNING: [Synth 8-3295] tying undriven pin dout:s_axis_tvalid to constant 0 [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:161]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1409.531 ; gain = 164.531 ; free physical = 326 ; free virtual = 23732
+---------------------------------------------------------------------------------
+|DNS-request| license.eng.warwick.ac.uk 
+|S-chain|-<>-127.0.0.1:9050-<--timeout
+|DNS-response|: license.eng.warwick.ac.uk does not exist
+|DNS-request| license.eng.warwick.ac.uk 
+|S-chain|-<>-127.0.0.1:9050-<--timeout
+|DNS-response|: license.eng.warwick.ac.uk does not exist
+|DNS-request| license.eng.warwick.ac.uk 
+|S-chain|-<>-127.0.0.1:9050-<--timeout
+|DNS-response|: license.eng.warwick.ac.uk does not exist
+|DNS-request| license.eng.warwick.ac.uk 
+|S-chain|-<>-127.0.0.1:9050-<--timeout
+|DNS-response|: license.eng.warwick.ac.uk does not exist
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/aes_v1_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/aes_v1_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1750.676 ; gain = 0.000 ; free physical = 280 ; free virtual = 23447
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1750.676 ; gain = 505.676 ; free physical = 371 ; free virtual = 23538
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1750.676 ; gain = 505.676 ; free physical = 371 ; free virtual = 23538
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/aes/din. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/aes/dout. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1750.676 ; gain = 505.676 ; free physical = 371 ; free virtual = 23537
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axis_dwidth_converter_v1_1_14_axisc_upsizer'
+INFO: [Synth 8-5544] ROM "r0_reg_sel0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r0_reg_sel0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'S_reg' in module 'cipher_cu'
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'S_reg' in module 'inv_cipher_cu'
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'S_reg' in module 'aes_module_cu'
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "S_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "status_1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                SM_RESET |                            00010 |                              000
+                 SM_IDLE |                            00001 |                              001
+               SM_ACTIVE |                            01000 |                              101
+                  SM_END |                            00100 |                              011
+        SM_END_TO_ACTIVE |                            10000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axis_dwidth_converter_v1_1_14_axisc_upsizer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                              000 |                              000
+                      s1 |                              001 |                              001
+                      s2 |                              010 |                              010
+                      s3 |                              011 |                              011
+                      s4 |                              100 |                              100
+                      s5 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'S_reg' using encoding 'sequential' in module 'cipher_cu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s0 |                              000 |                              000
+                      s1 |                              001 |                              001
+                      s2 |                              010 |                              010
+                      s3 |                              011 |                              011
+                      s4 |                              100 |                              100
+                      s5 |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'S_reg' using encoding 'sequential' in module 'inv_cipher_cu'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 s_ready |                              000 |                              000
+                   s_exp |                              001 |                              011
+                  s_done |                              010 |                              100
+                   s_enc |                              011 |                              001
+                   s_dec |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'S_reg' using encoding 'sequential' in module 'aes_module_cu'
+WARNING: [Synth 8-327] inferring latch for variable 'y_mux_ctrl_reg' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/src/aes_module_cu.vhd:84]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 1750.676 ; gain = 505.676 ; free physical = 363 ; free virtual = 23530
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 2     
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+	   4 Input      8 Bit         XORs := 32    
+	   2 Input      1 Bit         XORs := 566   
+	   3 Input      1 Bit         XORs := 206   
+	   4 Input      1 Bit         XORs := 50    
+	   5 Input      1 Bit         XORs := 4     
++---Registers : 
+	              128 Bit    Registers := 7     
+	               32 Bit    Registers := 11    
+	               16 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 21    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 25    
++---RAMs : 
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 6     
+	  15 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 2     
+	  17 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 4     
+	   5 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 22    
+	   6 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aes_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+Module axis_dwidth_converter_v1_1_14_axisc_upsizer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  15 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module axis_register_slice_v1_1_15_axis_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_register_slice_v1_1_15_axis_register_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_dwidth_converter_v1_1_14_axis_dwidth_converter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_dwidth_converter_v1_1_14_axisc_downsizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module cipher_cu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+Module state_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+Module cipher 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   4 Input      8 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 160   
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module inv_cipher_cu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+Module inv_cipher 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   4 Input      8 Bit         XORs := 16    
+	   2 Input      1 Bit         XORs := 406   
+	   3 Input      1 Bit         XORs := 206   
+	   4 Input      1 Bit         XORs := 50    
+	   5 Input      1 Bit         XORs := 4     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+Module decrementor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module key_expander 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	              128 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module dp_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module key_expansion_cu 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module key_expansion 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+Module aes_module_cu 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 6     
+Module aes_module 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module aes_wrapper 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module aes_v1_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_dest_reg[0:0]' into 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:706]
+INFO: [Synth 8-4471] merging register 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_user_reg[3:0]' into 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_strb_reg[3:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:707]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:702]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:703]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:711]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_id_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:705]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_id_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:723]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:706]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/acc_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:724]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_upsizer_conversion.axisc_upsizer_0/r0_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:707]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_0/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_1/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_last_reg' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_dest_reg[0:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_dest_reg[0:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_user_reg[15:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_strb_reg[15:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_user_reg[3:0]' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_strb_reg[3:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+INFO: [Synth 8-4471] merging register 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_last_reg' into 'inst/gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0:0]' [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:288]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_strb_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:288]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:289]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_keep_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:289]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_last_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:290]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_dest_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r0_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+WARNING: [Synth 8-6014] Unused sequential element inst/gen_downsizer_conversion.axisc_downsizer_0/r1_user_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:293]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_0/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-6014] Unused sequential element inst/axis_register_slice_1/areset_r_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/ip/axis_dwidth_converter_0/hdl/axis_register_slice_v1_1_vl_rfs.v:1416]
+WARNING: [Synth 8-6014] Unused sequential element inst/aes/status_1_reg was removed.  [/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.srcs/sources_1/ip/aes_v1_0_0/sources_1/imports/aes_1.0/hdl/aes_v1_0.v:196]
+INFO: [Synth 8-3917] design aes_v1_0_0 has port led_status[3] driven by constant 0
+INFO: [Synth 8-3917] design aes_v1_0_0 has port led_status[2] driven by constant 0
+INFO: [Synth 8-3917] design aes_v1_0_0 has port led_status[1] driven by constant 0
+INFO: [Synth 8-3917] design aes_v1_0_0 has port led_status[0] driven by constant 1
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/aes/aes/aes_module /\control_unit/y_mux_ctrl_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/aes/aes_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/aes/aes_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/aes/aes_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/aes/aes_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/aes/aes_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/aes/aes_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[127]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[126]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[125]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[124]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[123]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[122]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[121]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[120]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[119]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[118]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[117]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[116]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[115]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[114]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[113]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[112]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[111]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[110]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[109]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[108]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[107]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[106]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[105]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[104]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[103]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[102]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[101]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[100]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[99]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[98]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[97]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[96]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[95]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[94]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[93]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[92]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[91]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[90]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[89]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[88]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[87]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[86]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[85]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[84]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[83]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[82]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[81]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[80]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[79]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[78]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[77]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[76]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[75]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[74]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[73]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[72]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[71]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[70]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[69]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[68]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[67]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[66]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[65]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[64]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[63]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[62]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[61]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[60]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[59]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[58]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[57]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[56]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[55]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[54]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[53]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[52]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[51]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[50]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[49]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[48]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[47]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[46]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[45]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[44]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[43]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[42]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[41]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[40]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[39]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[38]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[37]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[36]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[35]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[34]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[33]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[32]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[31]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[30]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[29]) is unused and will be removed from module encryption_module.
+WARNING: [Synth 8-3332] Sequential element (cipher_unit/reg/Q_reg_rep[28]) is unused and will be removed from module encryption_module.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/aes/din /\inst/gen_upsizer_conversion.axisc_upsizer_0/r0_last_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1750.676 ; gain = 505.676 ; free physical = 311 ; free virtual = 23477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+-------------------------+---------------+----------------+
+|Module Name       | RTL Object              | Depth x Width | Implemented As | 
++------------------+-------------------------+---------------+----------------+
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|cipher            | sbox_lut[0]             | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|key_expander      | rcon_lut[0]             | 256x8         | LUT            | 
+|key_expander      | sbox_lut[0]             | 256x8         | LUT            | 
+|key_expander      | sbox_lut[0]             | 256x8         | LUT            | 
+|key_expander      | sbox_lut[0]             | 256x8         | LUT            | 
+|key_expander      | sbox_lut[0]             | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|encryption_module | cipher_unit/sbox_lut[0] | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|inv_cipher        | inv_sbox_lut[0]         | 256x8         | LUT            | 
+|key_expansion     | expander/rcon_lut[0]    | 256x8         | LUT            | 
+|key_expansion     | expander/sbox_lut[0]    | 256x8         | LUT            | 
+|key_expansion     | expander/sbox_lut[0]    | 256x8         | LUT            | 
+|key_expansion     | expander/sbox_lut[0]    | 256x8         | LUT            | 
+|key_expansion     | expander/sbox_lut[0]    | 256x8         | LUT            | 
++------------------+-------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dp_ram:     | ram_reg    | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:52 . Memory (MB): peak = 1760.676 ; gain = 515.676 ; free physical = 173 ; free virtual = 23348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 1761.676 ; gain = 516.676 ; free physical = 177 ; free virtual = 23345
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|dp_ram:     | ram_reg    | 16 x 128(READ_FIRST)   | W |   | 16 x 128(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/aes/aes/aes_module/key_expansion/ram/ram_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/aes/aes/aes_module/key_expansion/ram/ram_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:54 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 226 ; free virtual = 23394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin inst/aes/dout:s_axis_tvalid to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 226 ; free virtual = 23393
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 226 ; free virtual = 23393
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 226 ; free virtual = 23393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 226 ; free virtual = 23393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 227 ; free virtual = 23394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 227 ; free virtual = 23394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     3|
+|2     |LUT2     |    54|
+|3     |LUT3     |   171|
+|4     |LUT4     |   127|
+|5     |LUT5     |   271|
+|6     |LUT6     |  1839|
+|7     |MUXF7    |   579|
+|8     |MUXF8    |   235|
+|9     |RAMB36E1 |     2|
+|10    |FDCE     |   571|
+|11    |FDRE     |   507|
+|12    |FDSE     |     4|
+|13    |LD       |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+|      |Instance                                               |Module                                                              |Cells |
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+|1     |top                                                    |                                                                    |  4364|
+|2     |  inst                                                 |top                                                                 |  4364|
+|3     |    aes                                                |aes_v1_0                                                            |  4364|
+|4     |      din                                              |axis_dwidth_converter_1                                             |   192|
+|5     |        inst                                           |axis_dwidth_converter_v1_1_14_axis_dwidth_converter                 |   192|
+|6     |          \gen_upsizer_conversion.axisc_upsizer_0      |axis_dwidth_converter_v1_1_14_axisc_upsizer                         |   190|
+|7     |      dout                                             |axis_dwidth_converter_0                                             |   245|
+|8     |        inst                                           |axis_dwidth_converter_v1_1_14_axis_dwidth_converter__parameterized0 |   245|
+|9     |          \gen_downsizer_conversion.axisc_downsizer_0  |axis_dwidth_converter_v1_1_14_axisc_downsizer                       |   243|
+|10    |      aes                                              |aes_wrapper                                                         |  3695|
+|11    |        aes_module                                     |aes_module                                                          |  3695|
+|12    |          control_unit                                 |aes_module_cu                                                       |    22|
+|13    |          decryption_module                            |decryption_module                                                   |  1498|
+|14    |            cipher_unit                                |inv_cipher                                                          |  1473|
+|15    |              \reg                                     |state_reg_1                                                         |  1142|
+|16    |            control_unit                               |inv_cipher_cu                                                       |    10|
+|17    |            counter                                    |decrementor                                                         |    15|
+|18    |          encryption_module                            |encryption_module                                                   |  1468|
+|19    |            cipher_unit                                |cipher                                                              |  1440|
+|20    |              \reg                                     |state_reg                                                           |  1056|
+|21    |            control_unit                               |cipher_cu                                                           |     9|
+|22    |            counter                                    |counter_0                                                           |    19|
+|23    |          key_expansion                                |key_expansion                                                       |   579|
+|24    |            control_unit                               |key_expansion_cu                                                    |     7|
+|25    |            counter                                    |counter                                                             |    46|
+|26    |            expander                                   |key_expander                                                        |   524|
+|27    |            ram                                        |dp_ram                                                              |     2|
+|28    |      aes_v1_0_S00_AXI_inst                            |aes_v1_0_S00_AXI                                                    |   232|
++------+-------------------------------------------------------+--------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 1800.004 ; gain = 555.004 ; free physical = 227 ; free virtual = 23394
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 401 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1800.004 ; gain = 213.859 ; free physical = 285 ; free virtual = 23451
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:55 . Memory (MB): peak = 1800.012 ; gain = 555.004 ; free physical = 285 ; free virtual = 23451
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 817 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+130 Infos, 235 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 1800.012 ; gain = 579.836 ; free physical = 307 ; free virtual = 23475
+INFO: [Common 17-1381] The checkpoint '/home/alex/GitHub/zynq-ip-cores/crypto_wrapper/crypto_wrapper.runs/aes_v1_0_0_synth_1/aes_v1_0_0.dcp' has been generated.

@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: user.org:user:present:1.0
-// IP Revision: 10
+// IP Revision: 12
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -89,7 +89,8 @@ present_0 your_instance_name (
   .m00_axis_tdata(m00_axis_tdata),      // output wire [31 : 0] m00_axis_tdata
   .m00_axis_tstrb(m00_axis_tstrb),      // output wire [3 : 0] m00_axis_tstrb
   .m00_axis_tlast(m00_axis_tlast),      // output wire m00_axis_tlast
-  .m00_axis_tready(m00_axis_tready)    // input wire m00_axis_tready
+  .m00_axis_tready(m00_axis_tready),    // input wire m00_axis_tready
+  .led_status(led_status)              // output wire [3 : 0] led_status
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

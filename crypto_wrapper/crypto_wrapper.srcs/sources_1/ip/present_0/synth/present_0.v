@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:present:1.0
-// IP Revision: 10
+// IP Revision: 12
 
 (* X_CORE_INFO = "pres_top,Vivado 2017.4" *)
 (* CHECK_LICENSE_TYPE = "present_0,pres_top,{}" *)
@@ -88,7 +88,8 @@ module present_0 (
   m00_axis_tdata,
   m00_axis_tstrb,
   m00_axis_tlast,
-  m00_axis_tready
+  m00_axis_tready,
+  led_status
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, FREQ_HZ 100000000, PHASE 0.000" *)
@@ -170,6 +171,7 @@ output wire m00_axis_tlast;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m00_axis TREADY" *)
 input wire m00_axis_tready;
+output wire [3 : 0] led_status;
 
   pres_top #(
     .C_S00_AXI_DATA_WIDTH(32),
@@ -212,6 +214,7 @@ input wire m00_axis_tready;
     .m00_axis_tdata(m00_axis_tdata),
     .m00_axis_tstrb(m00_axis_tstrb),
     .m00_axis_tlast(m00_axis_tlast),
-    .m00_axis_tready(m00_axis_tready)
+    .m00_axis_tready(m00_axis_tready),
+    .led_status(led_status)
   );
 endmodule

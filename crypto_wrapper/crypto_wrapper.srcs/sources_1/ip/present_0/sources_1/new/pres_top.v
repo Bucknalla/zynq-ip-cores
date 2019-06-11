@@ -71,7 +71,10 @@ module pres_top #(
 		output wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
 		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
 		output wire  m00_axis_tlast,
-		input wire  m00_axis_tready
+		input wire  m00_axis_tready,
+		
+		// LED Status
+		output reg [3:0] led_status = 2
     );
     
 	present_v1_0 present
