@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon Jun 10 12:33:18 2019
-// Host        : alex-pc running 64-bit Ubuntu 18.10
+// Date        : Wed Jun 12 13:13:04 2019
+// Host        : alex-warc running 64-bit Ubuntu 18.04.2 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top aes_v1_0_0 -prefix
 //               aes_v1_0_0_ aes_v1_0_0_sim_netlist.v
 // Design      : aes_v1_0_0
@@ -1401,6 +1401,7 @@ module aes_v1_0_0
   assign led_status[2] = \<const0> ;
   assign led_status[1] = \<const0> ;
   assign led_status[0] = \<const1> ;
+  assign m00_axis_tlast = \<const0> ;
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;

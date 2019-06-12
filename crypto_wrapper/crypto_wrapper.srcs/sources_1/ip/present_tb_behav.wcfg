@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="present_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="present_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1660000001fs"></ZoomEndTime>
+      <Cursor1Time time="1075000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="168" />
+   <wvobject type="logic" fp_name="/present_tb/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AW_VALID">
+      <obj_property name="ElementShortName">M_AW_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_AW_VALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_AW_ADDR">
+      <obj_property name="ElementShortName">M_AW_ADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AW_ADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_W_STRB">
+      <obj_property name="ElementShortName">M_W_STRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_W_STRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AW_READY">
+      <obj_property name="ElementShortName">M_AW_READY</obj_property>
+      <obj_property name="ObjectShortName">M_AW_READY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_W_VALID">
+      <obj_property name="ElementShortName">M_W_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_W_VALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_W_READY">
+      <obj_property name="ElementShortName">M_W_READY</obj_property>
+      <obj_property name="ObjectShortName">M_W_READY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_W_DATA">
+      <obj_property name="ElementShortName">M_W_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_W_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_AR_ADDR">
+      <obj_property name="ElementShortName">M_AR_ADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AR_ADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AR_VALID">
+      <obj_property name="ElementShortName">M_AR_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_AR_VALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AR_READY">
+      <obj_property name="ElementShortName">M_AR_READY</obj_property>
+      <obj_property name="ObjectShortName">M_AR_READY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_B_READY">
+      <obj_property name="ElementShortName">M_B_READY</obj_property>
+      <obj_property name="ObjectShortName">M_B_READY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_B_VALID">
+      <obj_property name="ElementShortName">M_B_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_B_VALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_B_RESP">
+      <obj_property name="ElementShortName">M_B_RESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">M_B_RESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/S_AXIS_VALID">
+      <obj_property name="ElementShortName">S_AXIS_VALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_VALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/S_AXIS_READY">
+      <obj_property name="ElementShortName">S_AXIS_READY</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_READY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/S_AXIS_DATA">
+      <obj_property name="ElementShortName">S_AXIS_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXIS_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AXIS_VALID">
+      <obj_property name="ElementShortName">M_AXIS_VALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_VALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/M_AXIS_READY">
+      <obj_property name="ElementShortName">M_AXIS_READY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_READY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/M_AXIS_DATA">
+      <obj_property name="ElementShortName">M_AXIS_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_DATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/PERIOD">
+      <obj_property name="ElementShortName">PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/sel">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/select_prev">
+      <obj_property name="ElementShortName">select_prev[2:0]</obj_property>
+      <obj_property name="ObjectShortName">select_prev[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/select">
+      <obj_property name="ElementShortName">select[2:0]</obj_property>
+      <obj_property name="ObjectShortName">select[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/key_cnt">
+      <obj_property name="ElementShortName">key_cnt[10:0]</obj_property>
+      <obj_property name="ObjectShortName">key_cnt[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/gen_key">
+      <obj_property name="ElementShortName">gen_key</obj_property>
+      <obj_property name="ObjectShortName">gen_key</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/key_in_progress">
+      <obj_property name="ElementShortName">key_in_progress</obj_property>
+      <obj_property name="ObjectShortName">key_in_progress</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/enc_start">
+      <obj_property name="ElementShortName">enc_start</obj_property>
+      <obj_property name="ObjectShortName">enc_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">Present</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/enc_plaintext">
+      <obj_property name="ElementShortName">enc_plaintext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">enc_plaintext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/dec_ciphertext">
+      <obj_property name="ElementShortName">dec_ciphertext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_ciphertext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/enc_ciphertext">
+      <obj_property name="ElementShortName">enc_ciphertext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">enc_ciphertext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/dec_plaintext">
+      <obj_property name="ElementShortName">dec_plaintext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_plaintext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/enc_start">
+      <obj_property name="ElementShortName">enc_start</obj_property>
+      <obj_property name="ObjectShortName">enc_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/dec_start">
+      <obj_property name="ElementShortName">dec_start</obj_property>
+      <obj_property name="ObjectShortName">dec_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/enc_ready">
+      <obj_property name="ElementShortName">enc_ready</obj_property>
+      <obj_property name="ObjectShortName">enc_ready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/dec_ready">
+      <obj_property name="ElementShortName">dec_ready</obj_property>
+      <obj_property name="ObjectShortName">dec_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/key">
+      <obj_property name="ElementShortName">key[79:0]</obj_property>
+      <obj_property name="ObjectShortName">key[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/generate_key">
+      <obj_property name="ElementShortName">generate_key</obj_property>
+      <obj_property name="ObjectShortName">generate_key</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/clk_in">
+      <obj_property name="ElementShortName">clk_in</obj_property>
+      <obj_property name="ObjectShortName">clk_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/rst_in">
+      <obj_property name="ElementShortName">rst_in</obj_property>
+      <obj_property name="ObjectShortName">rst_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/enc_hdr_start">
+      <obj_property name="ElementShortName">enc_hdr_start</obj_property>
+      <obj_property name="ObjectShortName">enc_hdr_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/dec_hdr_start">
+      <obj_property name="ElementShortName">dec_hdr_start</obj_property>
+      <obj_property name="ObjectShortName">dec_hdr_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/enc_hdr_done">
+      <obj_property name="ElementShortName">enc_hdr_done</obj_property>
+      <obj_property name="ObjectShortName">enc_hdr_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/dec_hdr_done">
+      <obj_property name="ElementShortName">dec_hdr_done</obj_property>
+      <obj_property name="ObjectShortName">dec_hdr_done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/key_mem">
+      <obj_property name="ElementShortName">key_mem[31:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">key_mem[31:0][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/time_key_mem">
+      <obj_property name="ElementShortName">time_key_mem[31:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">time_key_mem[31:0][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/dec_subkey">
+      <obj_property name="ElementShortName">dec_subkey[63:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_subkey[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/enc_subkey">
+      <obj_property name="ElementShortName">enc_subkey[63:0]</obj_property>
+      <obj_property name="ObjectShortName">enc_subkey[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/key_generated">
+      <obj_property name="ElementShortName">key_generated</obj_property>
+      <obj_property name="ObjectShortName">key_generated</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/gen_key">
+      <obj_property name="ElementShortName">gen_key</obj_property>
+      <obj_property name="ObjectShortName">gen_key</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/keygen_init">
+      <obj_property name="ElementShortName">keygen_init[1:0]</obj_property>
+      <obj_property name="ObjectShortName">keygen_init[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/key_val">
+      <obj_property name="ElementShortName">key_val[79:0]</obj_property>
+      <obj_property name="ObjectShortName">key_val[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/keymem_en">
+      <obj_property name="ElementShortName">keymem_en</obj_property>
+      <obj_property name="ObjectShortName">keymem_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/timemem_en">
+      <obj_property name="ElementShortName">timemem_en</obj_property>
+      <obj_property name="ObjectShortName">timemem_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/decoding_txt">
+      <obj_property name="ElementShortName">decoding_txt</obj_property>
+      <obj_property name="ObjectShortName">decoding_txt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/encoding_txt">
+      <obj_property name="ElementShortName">encoding_txt</obj_property>
+      <obj_property name="ObjectShortName">encoding_txt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/encoder_ready">
+      <obj_property name="ElementShortName">encoder_ready</obj_property>
+      <obj_property name="ObjectShortName">encoder_ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/subkey">
+      <obj_property name="ElementShortName">subkey[63:0]</obj_property>
+      <obj_property name="ObjectShortName">subkey[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/keymem_wr">
+      <obj_property name="ElementShortName">keymem_wr</obj_property>
+      <obj_property name="ObjectShortName">keymem_wr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/keymem_addr">
+      <obj_property name="ElementShortName">keymem_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">keymem_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/enc_keymem_addr">
+      <obj_property name="ElementShortName">enc_keymem_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">enc_keymem_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/dec_keymem_addr">
+      <obj_property name="ElementShortName">dec_keymem_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_keymem_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/keygen_done">
+      <obj_property name="ElementShortName">keygen_done</obj_property>
+      <obj_property name="ObjectShortName">keygen_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/dec_timekey_gen">
+      <obj_property name="ElementShortName">dec_timekey_gen</obj_property>
+      <obj_property name="ObjectShortName">dec_timekey_gen</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/enc_timekey_gen">
+      <obj_property name="ElementShortName">enc_timekey_gen</obj_property>
+      <obj_property name="ObjectShortName">enc_timekey_gen</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/enc_rxorer">
+      <obj_property name="ElementShortName">enc_rxorer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">enc_rxorer[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/dec_rxorer">
+      <obj_property name="ElementShortName">dec_rxorer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rxorer[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/i">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_64">
+      <obj_property name="ElementShortName">b_64[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_64[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_80">
+      <obj_property name="ElementShortName">b_80[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_80[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_2">
+      <obj_property name="ElementShortName">b_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_4">
+      <obj_property name="ElementShortName">b_4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_4[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_5">
+      <obj_property name="ElementShortName">b_5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_5[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/b_32">
+      <obj_property name="ElementShortName">b_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider73" type="divider">
+      <obj_property name="label">DECODE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/ciphertext">
+      <obj_property name="ElementShortName">ciphertext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ciphertext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/plaintext">
+      <obj_property name="ElementShortName">plaintext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">plaintext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/start">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/subkey">
+      <obj_property name="ElementShortName">subkey[63:0]</obj_property>
+      <obj_property name="ObjectShortName">subkey[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/keymem_addr">
+      <obj_property name="ElementShortName">keymem_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">keymem_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/clk_in">
+      <obj_property name="ElementShortName">clk_in</obj_property>
+      <obj_property name="ObjectShortName">clk_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/rst_in">
+      <obj_property name="ElementShortName">rst_in</obj_property>
+      <obj_property name="ObjectShortName">rst_in</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/header_start">
+      <obj_property name="ElementShortName">header_start</obj_property>
+      <obj_property name="ObjectShortName">header_start</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/header_done">
+      <obj_property name="ElementShortName">header_done</obj_property>
+      <obj_property name="ObjectShortName">header_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/time_key_gen">
+      <obj_property name="ElementShortName">time_key_gen</obj_property>
+      <obj_property name="ObjectShortName">time_key_gen</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/rxorer">
+      <obj_property name="ElementShortName">rxorer[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rxorer[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/state">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/cntr_en">
+      <obj_property name="ElementShortName">cntr_en</obj_property>
+      <obj_property name="ObjectShortName">cntr_en</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/mux_en">
+      <obj_property name="ElementShortName">mux_en</obj_property>
+      <obj_property name="ObjectShortName">mux_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/cntr_val">
+      <obj_property name="ElementShortName">cntr_val[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cntr_val[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/max_val">
+      <obj_property name="ElementShortName">max_val[4:0]</obj_property>
+      <obj_property name="ObjectShortName">max_val[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/inp_reg">
+      <obj_property name="ElementShortName">inp_reg[63:0]</obj_property>
+      <obj_property name="ObjectShortName">inp_reg[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/key_reg">
+      <obj_property name="ElementShortName">key_reg[79:0]</obj_property>
+      <obj_property name="ObjectShortName">key_reg[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present/present_DEC/hdr_flag">
+      <obj_property name="ElementShortName">hdr_flag</obj_property>
+      <obj_property name="ObjectShortName">hdr_flag</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/inp_reg_i">
+      <obj_property name="ElementShortName">inp_reg_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">inp_reg_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/intertext">
+      <obj_property name="ElementShortName">intertext[63:0]</obj_property>
+      <obj_property name="ObjectShortName">intertext[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/cipher">
+      <obj_property name="ElementShortName">cipher[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cipher[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/perm_cipher">
+      <obj_property name="ElementShortName">perm_cipher[63:0]</obj_property>
+      <obj_property name="ObjectShortName">perm_cipher[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/key_reg_i">
+      <obj_property name="ElementShortName">key_reg_i[79:0]</obj_property>
+      <obj_property name="ObjectShortName">key_reg_i[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/key_temp">
+      <obj_property name="ElementShortName">key_temp[79:0]</obj_property>
+      <obj_property name="ObjectShortName">key_temp[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/interkey">
+      <obj_property name="ElementShortName">interkey[79:0]</obj_property>
+      <obj_property name="ObjectShortName">interkey[79:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/key_updt">
+      <obj_property name="ElementShortName">key_updt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">key_updt[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/key_rand">
+      <obj_property name="ElementShortName">key_rand[4:0]</obj_property>
+      <obj_property name="ObjectShortName">key_rand[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_64">
+      <obj_property name="ElementShortName">b_64[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_64[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_80">
+      <obj_property name="ElementShortName">b_80[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_80[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_2">
+      <obj_property name="ElementShortName">b_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_4">
+      <obj_property name="ElementShortName">b_4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_4[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_5">
+      <obj_property name="ElementShortName">b_5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_5[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/b_32">
+      <obj_property name="ElementShortName">b_32[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b_32[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/time_key">
+      <obj_property name="ElementShortName">time_key[31:0]</obj_property>
+      <obj_property name="ObjectShortName">time_key[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/IDLE">
+      <obj_property name="ElementShortName">IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/DECODE">
+      <obj_property name="ElementShortName">DECODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DECODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/WAIT">
+      <obj_property name="ElementShortName">WAIT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">WAIT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/DONE">
+      <obj_property name="ElementShortName">DONE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">DONE[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present/present_DEC/max_rounds">
+      <obj_property name="ElementShortName">max_rounds[4:0]</obj_property>
+      <obj_property name="ObjectShortName">max_rounds[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider127" type="divider">
+      <obj_property name="label">ACI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/mode_out">
+      <obj_property name="ElementShortName">mode_out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode_out[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/mode_in">
+      <obj_property name="ElementShortName">mode_in[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mode_in[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_0">
+      <obj_property name="ElementShortName">key_0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_1">
+      <obj_property name="ElementShortName">key_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/key_2">
+      <obj_property name="ElementShortName">key_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWADDR">
+      <obj_property name="ElementShortName">S_AXI_AWADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWPROT">
+      <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWVALID">
+      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_AWREADY">
+      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WDATA">
+      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WSTRB">
+      <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WVALID">
+      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_WREADY">
+      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BRESP">
+      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BVALID">
+      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_BREADY">
+      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARADDR">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARPROT">
+      <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARVALID">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_ARREADY">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RRESP">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RVALID">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/S_AXI_RREADY">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_awaddr">
+      <obj_property name="ElementShortName">axi_awaddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_awaddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_awready">
+      <obj_property name="ElementShortName">axi_awready</obj_property>
+      <obj_property name="ObjectShortName">axi_awready</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_wready">
+      <obj_property name="ElementShortName">axi_wready</obj_property>
+      <obj_property name="ObjectShortName">axi_wready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_bresp">
+      <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_bvalid">
+      <obj_property name="ElementShortName">axi_bvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_bvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_araddr">
+      <obj_property name="ElementShortName">axi_araddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_araddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_arready">
+      <obj_property name="ElementShortName">axi_arready</obj_property>
+      <obj_property name="ObjectShortName">axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rdata">
+      <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rresp">
+      <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/axi_rvalid">
+      <obj_property name="ElementShortName">axi_rvalid</obj_property>
+      <obj_property name="ObjectShortName">axi_rvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg0">
+      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg1">
+      <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg2">
+      <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg3">
+      <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg_rden">
+      <obj_property name="ElementShortName">slv_reg_rden</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_rden</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/slv_reg_wren">
+      <obj_property name="ElementShortName">slv_reg_wren</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_wren</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/reg_data_out">
+      <obj_property name="ElementShortName">reg_data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/byte_index">
+      <obj_property name="ElementShortName">byte_index[31:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_index[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/aw_en">
+      <obj_property name="ElementShortName">aw_en</obj_property>
+      <obj_property name="ObjectShortName">aw_en</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/ADDR_LSB">
+      <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/present_tb/dut/present_v1_0_S00_AXI_inst/OPT_MEM_ADDR_BITS">
+      <obj_property name="ElementShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OPT_MEM_ADDR_BITS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

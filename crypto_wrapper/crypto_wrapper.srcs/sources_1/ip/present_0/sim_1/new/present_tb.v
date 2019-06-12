@@ -39,8 +39,8 @@ reg M_AR_VALID = 0;
 wire M_AR_READY;
 
 reg M_B_READY = 0;
-wire M_B_VALID = 0;
-wire M_B_RESP; // Write information (not required)
+wire M_B_VALID;
+wire [1:0] M_B_RESP; // Write information (not required)
 
 ///////////////////////////  AXI_STREAM (MASTER)  ////////////////////////////////
 
@@ -54,13 +54,7 @@ wire M_AXIS_VALID;
 reg M_AXIS_READY = 1;
 wire [31:0] M_AXIS_DATA;
 
-///////////////////////////////  AES_STATUS  ////////////////////////////////////
-
-
-wire AES_DONE;
-wire STATUS_0;
-wire STATUS_1;
-
+///////////////////////////////  PRESENT_STATUS  ////////////////////////////////////
 
 present_v1_0 dut (
  .s00_axi_aclk(CLK),
@@ -74,9 +68,9 @@ present_v1_0 dut (
    .s00_axi_wstrb(M_W_STRB),
    .s00_axi_wvalid(M_W_VALID),
    .s00_axi_wready(M_W_READY),
-//    .s00_axi_bresp(),
-   .s00_axi_bvalid(),
-//    .s00_axi_bready(),
+    .s00_axi_bresp(M_B_RESP),
+   .s00_axi_bvalid(M_B_VALID),
+    .s00_axi_bready(M_B_READY),
    .s00_axi_araddr(M_AR_ADDR),
 //    .s00_axi_arprot(),
    .s00_axi_arvalid(M_AR_VALID),
@@ -117,11 +111,14 @@ task axi_write;
       M_W_VALID    = 1'b1;
       M_W_DATA = i_data;
 
-      #20
-      if(M_AW_READY) begin
-        #20 M_AW_VALID    = 1'b0;
+      #40
+//      if(M_AW_READY) begin
+        M_AW_VALID    = 1'b0;
         M_W_VALID    = 1'b0;
-      end
+        M_B_READY = 1'b1;
+      #40         M_B_READY = 1'b0;
+
+//      end
     end
  endtask
  
@@ -150,6 +147,7 @@ initial begin
     #20 RST = 1;
     #50 axi_write(0,3);
     #20 axis_write(100);
+    #400 axi_write(0,2);
     #1000 $finish;
 end
 

@@ -70,16 +70,17 @@
 	);
 	
     wire [1:0] sel;
-    reg enc_start, dec_start;
+    reg enc_start = 0, dec_start = 0;
     reg [63:0] enc_in;
     wire [63:0] enc_out;
     wire enc_ready;
     reg [63:0] dec_in;
     wire [63:0] dec_out;
     wire dec_ready;
-    wire enc_hdr_start;
-    wire dec_hdr_start; 
+    reg enc_hdr_start=0;
+    reg dec_hdr_start=0; 
     reg [63:0] out;
+    reg out_valid = 0;
     wire [63:0] in;
     wire [31:0] key_0, key_1, key_2;
     wire [79:0] key;
@@ -92,7 +93,7 @@
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
 	) present_v1_0_S00_AXI_inst (
-	    .mode(sel),
+	    .mode_out(sel),
 	    .key_0(key_0),
 	    .key_1(key_1),
 	    .key_2(key_2),
@@ -132,15 +133,21 @@
     
     wire out_aclk, out_aresetn;
     wire out_s_axis_tvalid;
+    assign out_s_axis_tvalid = out_valid;
     wire out_s_axis_tready;
     wire [63:0] out_s_axis_tdata;
     wire out_m_axis_tvalid;
-    assign out_m_axis_tvalid = m00_axis_tvalid;
+    assign m00_axis_tvalid = out_m_axis_tvalid;
     wire out_m_axis_tready;
+    assign out_m_axis_tready = m00_axis_tready;
     wire [31:0] out_m_axis_tdata;
+    assign out_s_axis_tdata = out;
     
     reg generate_key = 0;
     wire gen_key;
+    reg pres_rst = 0;
+    
+    wire enc_hdr_done;
 	
     PRESENT present (
             //encoder path
@@ -148,8 +155,8 @@
         .enc_ciphertext(enc_out),
         .enc_start(enc_start), 
         .enc_ready(enc_ready),
-        .enc_hdr_start(enc_start),
-        .enc_hdr_done(),
+        .enc_hdr_start(enc_hdr_start),
+        .enc_hdr_done(enc_hdr_done),
     //    encoder_ready,
         
         //decoder path
@@ -163,10 +170,10 @@
         // Key
         .key(key),
         .generate_key(generate_key), // generate subkeys
-        .gen_key(),
+        .gen_key(gen_key),
         // Clk,Rst
         .clk_in(s00_axis_aclk), 
-        .rst_in(s00_axis_aresetn)
+        .rst_in(pres_rst)
     );
     
     // AXIS IN
@@ -189,7 +196,7 @@
     
     // AXIS OUT
     
-    assign out_m_axis_tdata = m00_axis_tdata;
+//    assign m00_axis_tdata = out_m_axis_tdata;
     assign out_aclk = m00_axis_aclk;
     assign out_aresetn = m00_axis_aresetn;
     assign m00_axis_tvalid = out_m_axis_tvalid;
@@ -199,61 +206,99 @@
       .aresetn(out_aresetn),              // input wire aresetn
       .s_axis_tvalid(out_s_axis_tvalid),  // input wire s_axis_tvalid
       .s_axis_tready(out_s_axis_tready),  // output wire s_axis_tready
-      .s_axis_tdata(out),    // input wire [31 : 0] s_axis_tdata
+      .s_axis_tdata(out_s_axis_tdata),    // input wire [63 : 0] s_axis_tdata
       .m_axis_tvalid(out_m_axis_tvalid),  // output wire m_axis_tvalid
       .m_axis_tready(out_m_axis_tready),  // input wire m_axis_tready
-      .m_axis_tdata(out_m_axis_tdata)    // output wire [63 : 0] m_axis_tdata
+      .m_axis_tdata(m00_axis_tdata)    // output wire [31 : 0] m_axis_tdata
     );
     
     
     // Mode Select
 //    assign in_m_axis_tready = sel ? dec_ready : enc_ready;
     
-    reg [2:0] key_cnt = 0;
-    
+    reg [10:0] key_cnt = 0;
+    reg key_in_progress = 0;
+    localparam IDLE = 0;
+    localparam GEN_KEY = 3;
+    localparam DEC = 1;
+    localparam ENC = 2;
+    reg [2:0] select = IDLE;
+    reg [2:0] select_prev = IDLE;
+    reg enc_hdr_prev = 0;
     
     always @ (posedge s00_axis_aclk) begin
-      case (sel)
-      
-        0 : begin
-                enc_start <= 0;
-                dec_start <= 0;
-                out <= 0;
-                enc_in <= 0;
-                dec_in <= 0;
-                key_cnt <= 0;
-            end
-        1 : begin
-                enc_start <= 1;
-                dec_start <= 0;
-                out <= enc_out;
-                enc_in <= in;
-                dec_in <= 0;
-                key_cnt <= 0;
-               end
-        2 : begin
-                enc_start <= 0;
-                dec_start <= 1;
-                out <= dec_out;
-                dec_in <= in;
-                enc_in <= 0;
-                key_cnt <= 0;
-               end
-        3 : begin
-               enc_start <= 0;
-               dec_start <= 0;
-               out <= 0;
-               dec_in <= 0;
-               enc_in <= 0;
-               generate_key <= 1;
-               if(key_cnt == 2) begin
-                  generate_key <= 0;
-               end
-               else begin
-                  key_cnt <= key_cnt + 1;
-               end
-              end
-      endcase
+        if(!s00_axis_aresetn) begin
+        
+        end
+        else begin
+          case (select)
+            IDLE : begin
+                    enc_start <= 0;
+                    dec_start <= 0;
+                    out <= 0;
+                    enc_in <= 0;
+                    dec_in <= 0;
+                    key_cnt <= 0;
+                end
+            DEC : begin
+                    enc_start <= 1;
+                    dec_start <= 0;
+                    out <= enc_out;
+                    enc_in <= in;
+                    dec_in <= 0;
+                    key_cnt <= 0;
+                   end
+            ENC : begin
+                 if(!enc_hdr_prev) begin
+                       enc_hdr_start <= 1;
+                       enc_start <= 0;
+                       enc_in <= in;
+                       if(enc_hdr_done) begin
+                          enc_hdr_start <= 0;
+                          enc_hdr_prev <= 1;
+                       end
+                  end
+                  else begin
+                    enc_start <= 1;
+                    if(enc_ready) begin
+                        out <= enc_out;
+                        out_valid <= 1;
+                    end
+                    else begin
+                        out <= 0;
+                        out_valid <= 0;                    
+                    end
+                  end
+//                    enc_start <= 0;
+//                    dec_start <= 1;
+//                    out <= dec_out;
+//                    dec_in <= in;
+//                    enc_in <= 0;
+//                    key_cnt <= 0;
+                   end
+            GEN_KEY : begin
+                   pres_rst <= 1;
+                   out <= 0;
+                   if(gen_key | key_in_progress) begin
+                        key_in_progress <= 1;
+                        key_cnt <= key_cnt + 1;
+                        if(key_cnt == 32) begin
+                            key_cnt <= 0;
+                            key_in_progress <= 0; 
+                            select <= IDLE;
+                        end
+                   end
+                  
+                  end
+          endcase
+        end
+        if(select_prev != sel) begin
+            select <= sel;
+            select_prev <= sel;
+        end
+        else begin
+            select_prev <= sel;
+        end
     end
 
 

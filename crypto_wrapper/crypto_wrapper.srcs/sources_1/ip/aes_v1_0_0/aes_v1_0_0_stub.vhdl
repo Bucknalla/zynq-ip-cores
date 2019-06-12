@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Mon Jun 10 12:33:18 2019
--- Host        : alex-pc running 64-bit Ubuntu 18.10
+-- Date        : Wed Jun 12 13:13:04 2019
+-- Host        : alex-warc running 64-bit Ubuntu 18.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top aes_v1_0_0 -prefix
 --               aes_v1_0_0_ aes_v1_0_0_stub.vhdl
 -- Design      : aes_v1_0_0
